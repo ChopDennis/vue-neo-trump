@@ -35,7 +35,7 @@ export const store = new Vuex.Store({
             state.device.address = address
         },
         getIoConfigData(state) {
-            axios.get(state.url + 'api/config/io').then(
+            axios.get(state.url + '/api/config/io').then(
                 (response) => {
                     state.config.io.data = response.data
 
@@ -47,7 +47,7 @@ export const store = new Vuex.Store({
             )
         },
         getIniConfigData(state, payload) {
-            axios.get(state.url + 'api/config/ini/' + payload).then(
+            axios.get(state.url + '/api/config/ini/' + payload).then(
                 (response) => {
                     state.config.ini.data = response.data
                 }
@@ -58,7 +58,7 @@ export const store = new Vuex.Store({
             )
         },
         getWifiConfigData(state) {
-            axios.get(state.url + 'api/config/network').then(
+            axios.get(state.url + '/api/config/network').then(
                 (response) => {
                     state.config.wifi.data = response.data
                 }
@@ -79,7 +79,7 @@ export const store = new Vuex.Store({
             )
         },
         postWifiConfig(state){
-            axios.post(state.url + 'api/config/network',state.config.wifi.data).then(
+            axios.post(state.url + '/api/config/network',state.config.wifi.data).then(
                 (response) => {
                     if(response.status === 200){
                         console.log(response.data)
