@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="device">
+      <router-link to="/device">
         Device
       </router-link>
-      <router-link to="wifi-config">
+      <router-link to="/config/wifi">
         Wifi Config
       </router-link>
-      <router-link to="driver-config">
+      <router-link to="/driver-config">
         Driver Config
       </router-link>
-      <router-link to="imam-log">
+      <router-link to="/imam-log">
         Imam Box Log
+      </router-link>
+      <router-link to="/config/io">
+        IO Config
+      </router-link>
+      <router-link to="/config/ini">
+        Ini Config
       </router-link>
     </div>
 

@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Device from '../components/Device.vue'
-import Config from '../components/Config.vue'
 import Value from '../components/Value.vue'
 import Wifi from '../components/Wifi.vue'
 import Driver from '../components/Driver.vue'
@@ -16,8 +15,22 @@ const routes = [
         component: Device
     }, {
         path: '/config',
-        name: 'Config',
-        component: Config
+        name: 'config',
+        component: () => import('../views/PageConfigList'),
+        children: [
+            {
+                path: 'io',
+                component: () => import('../views/PageConfigIo'),
+            },
+            {
+                path: 'ini',
+                component: () => import('../views/PageConfigIni'),
+            },{
+                path: 'wifi',
+                component: () => import('../views/PageConfigWifi'),
+            },
+        ]
+
     }, {
         path: '/wifi-config',
         name: 'Wifi',
@@ -34,6 +47,16 @@ const routes = [
         path: '/imam-log',
         name: 'ImamLog',
         component: ImamLog
+    },
+    {
+        path: '/io-config',
+        name: 'IOConfig',
+        component: () => import('../views/PageConfigIo')
+    },
+    {
+        path: '/ini-config',
+        name: 'IniConfig',
+        component: () => import('../views/PageConfigIni')
     }
 ]
 

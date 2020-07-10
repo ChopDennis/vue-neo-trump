@@ -62,6 +62,11 @@
                     console.log(this.response.device)
                 }
             )
+            axios.get(baseUrl + '/api/config').then(
+                  (response) => {
+                    console.log(response)
+                  }
+          )
         },
         methods: {
             getValueList(port, address) {

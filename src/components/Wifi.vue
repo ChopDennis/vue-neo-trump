@@ -130,7 +130,7 @@
         beforeMount() {
             this.readWifi()
         },
-        methods: {
+      methods: {
             writeWifi() {
                 const baseUrl = this.$store.state.url
                 const request = {
