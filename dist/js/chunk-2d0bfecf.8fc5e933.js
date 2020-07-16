@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0bfecf"],{4030:function(e,n,t){"use strict";t.r(n);var a=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("main",[t("h2",{staticClass:"mb-3"},[e._v(" Update Config List ")]),t("router-view")],1)},i=[],s={name:"PageConfigList"},c=s,o=t("2877"),r=Object(o["a"])(c,a,i,!1,null,"3df13870",null);n["default"]=r.exports}}]);
-//# sourceMappingURL=chunk-2d0bfecf.8fc5e933.js.map
