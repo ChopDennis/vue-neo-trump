@@ -1,15 +1,15 @@
 <template>
-  <main>
-    <ElementFormStatic
-      :title="title"
-      :element-id="elementId"
-      :path="path"
-      :options="options"
-      :config-data="configData"
-      :read-only="readOnly"
-      @updateSelectValue="setIniConfigData($event)"
-    />
-  </main>
+    <main>
+        <ElementFormStatic
+                :title="title"
+                :element-id="elementId"
+                :path="path"
+                :options="options"
+                :config-data="configData"
+                :read-only="readOnly"
+                @updateSelectValue="setIniConfigData($event)"
+        />
+    </main>
 </template>
 
 <script>
@@ -31,14 +31,17 @@
                     'PutChillerData',
                     'ImaM'
                 ],
-                configData: {},
-                readOnly:true
+                readOnly: true
+            }
+        },
+        computed:{
+            configData(){
+                return this.$store.getters.iniConfigData
             }
         },
         methods: {
             setIniConfigData(event) {
                 this.$store.commit('getIniConfigData', event)
-                this.configData =  this.$store.getters.iniConfigData
             }
         }
     }

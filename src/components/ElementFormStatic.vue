@@ -1,28 +1,28 @@
 <template>
-  <div>
-    <b-container>
-      <b-card bg-variant="light">
-        <b-form-group
-          label-cols-lg="4"
-          :label="'Select ' + title"
-          label-size="lg"
-          label-class="font-weight-bold pt-0"
-          class="mb-0"
-        >
-          <ElementInputSelect
-            :select-options="options"
-            :element-id="elementId"
-            @updateSelectValue="setSelectValue($event)"
-          />
-        </b-form-group>
-      </b-card>
-    </b-container>
-    <ElementOutputList
-      :config="configData"
-      :read-only="readOnly"
-      @updateConfig="setNewConfigValue($event)"
-    />
-  </div>
+    <div>
+        <b-container>
+            <b-card bg-variant="light">
+                <b-form-group
+                        label-cols-lg="4"
+                        :label="'Select ' + title"
+                        label-size="lg"
+                        label-class="font-weight-bold pt-0"
+                        class="mb-0"
+                >
+                    <ElementInputSelect
+                            :select-options="options"
+                            :element-id="elementId"
+                            @updateSelectValue="setSelectValue($event)"
+                    />
+                </b-form-group>
+            </b-card>
+        </b-container>
+        <ElementOutputList
+                :config="configData"
+                :read-only="readOnly"
+                @updateConfig="setNewConfigValue($event)"
+        />
+    </div>
 </template>
 
 <script>
@@ -65,10 +65,10 @@
                 },
                 required: true
             },
-            readOnly:{
-              type:Boolean,
-              default:true,
-              required: true
+            readOnly: {
+                type: Boolean,
+                default: true,
+                required: true
             }
         },
         data() {
@@ -78,6 +78,7 @@
         },
         methods: {
             setSelectValue(event) {
+                console.log(event)
                 this.selected = event
                 this.$emit('updateSelectValue', this.selected)
             },
@@ -86,11 +87,11 @@
                 request[this.selected] = event
                 this.axios.post('/api/config/' + this.path, request).then(
                     (response) => {
-                        if(response.data['massage'] === 'Success' && response.status === 200){
+                        if (response.data['massage'] === 'Success' && response.status === 200) {
                             alert(response.status + ' - Update config success!')
                         }
                     }
-                ).catch((error)=>{
+                ).catch((error) => {
                     console.log(error)
                 })
             }

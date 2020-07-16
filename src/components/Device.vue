@@ -9,6 +9,7 @@
       <b-button
         v-b-toggle="'collapse-'+ key"
         variant="info"
+        :to="'device/'+item.port+'/'+item.address+'/'"
         @click="getValueList(item.port,item.address)"
       >
         {{ item.class }}<br>
@@ -37,6 +38,7 @@
         </b-card>
       </b-collapse>
     </div>
+    <router-view />
   </b-container>
 </template>
 <script>
@@ -63,10 +65,10 @@
                 }
             )
             axios.get(baseUrl + '/api/config').then(
-                  (response) => {
+                (response) => {
                     console.log(response)
-                  }
-          )
+                }
+            )
         },
         methods: {
             getValueList(port, address) {
@@ -74,6 +76,7 @@
                 console.log(this.$store.state.device)
                 this.$router.push('/value')
             }
+
         }
     }
 </script>

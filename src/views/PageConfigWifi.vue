@@ -60,7 +60,7 @@
             return {
                 title: "Wifi Config",
                 elementId: 'wifi-config-lists',
-                path: 'wifi',
+                path: 'network',
                 options: {
                     ket_mgmt: [
                         'WPA-PSK',

@@ -1,13 +1,16 @@
 <template>
   <b-container>
-    <h3>Log</h3>
-    <pre class="text-left">
-        {{ response.log }}
-    </pre>
-    <h3>USB</h3>
-    <pre class="text-left">
-        {{ response.usb }}
-    </pre>
+    <b-card bg-variant="light">
+      <h4>System Log</h4>
+      <div class="bg-white border-info border p-3 rounded-lg overflow-auto" style="max-height: 80vh">
+        <pre class="text-left">{{ response.log }}</pre>
+      </div>
+
+      <h4 class="mt-5">USB Log</h4>
+      <div class="bg-white border-info border p-3 rounded-lg overflow-auto " style="max-height: 80vh">
+        <pre class="text-left">{{ response.usb }}</pre>
+      </div>
+    </b-card>
   </b-container>
 </template>
 
@@ -15,7 +18,7 @@
     import axios from "axios";
 
     export default {
-        name: "ImamLog",
+        name: "ElementLogDisplay",
         data: () => {
             return {
                 response: {
@@ -45,4 +48,5 @@
 </script>
 
 <style scoped>
+
 </style>

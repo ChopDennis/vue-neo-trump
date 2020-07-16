@@ -20,14 +20,14 @@
         components: {
             ElementFormStatic,
         },
-        data() {
+        data: () => {
             return {
                 title: "IO Config Name",
                 elementId: 'io-config-lists',
                 path: 'io',
                 options: [],
                 configData: {},
-                readOnly:false
+                readOnly: false
             }
         },
         computed: {

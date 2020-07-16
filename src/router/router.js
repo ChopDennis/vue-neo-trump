@@ -1,18 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Device from '../components/Device.vue'
 import Value from '../components/Value.vue'
-import Wifi from '../components/Wifi.vue'
-import Driver from '../components/Driver.vue'
-import ImamLog from "../components/ImamLog";
-
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/device',
         name: 'Device',
-        component: Device
+        component: () => import('../components/Device'),
+        children: [
+            {
+                path: ':port/:address',
+                component: ()=>import('../views/PageDeviceValue')
+            }
+        ]
     }, {
         path: '/config',
         name: 'config',
@@ -25,38 +26,42 @@ const routes = [
             {
                 path: 'ini',
                 component: () => import('../views/PageConfigIni'),
-            },{
+            }, {
                 path: 'wifi',
-                component: () => import('../views/PageConfigWifi'),
+                component: () => import('../views/PageConfigWifi')
             },
+            {
+                path: 'driver',
+                component: () => import('../components/Driver')
+            }
         ]
 
-    }, {
-        path: '/wifi-config',
-        name: 'Wifi',
-        component: Wifi
-    }, {
-        path: '/driver-config',
-        name: 'Driver',
-        component: Driver
-    }, {
+    },{
+        path: '/system',
+        name: 'system',
+        component:()=>import('../views/PageSystemControl'),
+        children: [
+            {
+                path: 'log',
+                component: ()=>import('../components/SystemLogDisplay')
+            },
+            {
+                path: 'check',
+                component:()=>import('../components/SystemCheckStatus')
+            },
+            {
+                path: 'mainframe',
+                component:()=>import('../components/SystemMainframe')
+            },
+            {
+                path: 'hostname',
+                component:()=>import('../components/SystemHostname')
+            }
+        ]
+    },{
         path: '/value',
         name: 'Value',
         component: Value
-    }, {
-        path: '/imam-log',
-        name: 'ImamLog',
-        component: ImamLog
-    },
-    {
-        path: '/io-config',
-        name: 'IOConfig',
-        component: () => import('../views/PageConfigIo')
-    },
-    {
-        path: '/ini-config',
-        name: 'IniConfig',
-        component: () => import('../views/PageConfigIni')
     }
 ]
 

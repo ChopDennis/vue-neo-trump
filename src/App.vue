@@ -5,19 +5,10 @@
         Device
       </router-link>
       <router-link to="/config/wifi">
-        Wifi Config
+        Config
       </router-link>
-      <router-link to="/driver-config">
-        Driver Config
-      </router-link>
-      <router-link to="/imam-log">
-        Imam Box Log
-      </router-link>
-      <router-link to="/config/io">
-        IO Config
-      </router-link>
-      <router-link to="/config/ini">
-        Ini Config
+      <router-link to="/system/log">
+        System
       </router-link>
     </div>
 

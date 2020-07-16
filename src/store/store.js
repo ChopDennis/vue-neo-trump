@@ -11,6 +11,7 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     state: {
+        // url: 'http://192.168.6.211',
         url: '',
         device: {
             port: "",
@@ -24,7 +25,13 @@ export const store = new Vuex.Store({
                 data: {}
             },
             wifi: {
-                data:{}
+                data: {}
+            }
+
+        },
+        system: {
+            mainframe: {
+                toggled: true
             }
 
         }
@@ -68,7 +75,7 @@ export const store = new Vuex.Store({
                 }
             )
         },
-        insertWifiConfigInput(state){
+        insertWifiConfigInput(state) {
             state.config.wifi.data.push(
                 {
                     ssid: "",
@@ -78,10 +85,10 @@ export const store = new Vuex.Store({
                 }
             )
         },
-        postWifiConfig(state){
-            axios.post(state.url + '/api/config/network',state.config.wifi.data).then(
+        postWifiConfig(state) {
+            axios.post(state.url + '/api/config/network', state.config.wifi.data).then(
                 (response) => {
-                    if(response.status === 200){
+                    if (response.status === 200) {
                         console.log(response.data)
                     }
                 }

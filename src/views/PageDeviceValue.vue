@@ -1,0 +1,153 @@
+<template>
+  <b-container>
+    <b-card
+      bg-variant="light"
+      class="my-3"
+    >
+      <b-form-group
+        label-cols-lg="3"
+        label="Value Write List"
+        label-size="lg"
+        label-class="font-weight-bold pt-0"
+        class="mb-0"
+      >
+        <div
+          v-for="(item,index_write) in value_list_write"
+          :key="index_write"
+          :value="item"
+          class="my-3"
+        >
+          <div v-if="item.type==='w'">
+            <b-row>
+              <b-col lg="8">
+                <b-form-group
+                  label-cols-sm="3"
+                  :label="item.name + '：'"
+                  label-align-sm="right"
+                  label-for="driver-port-value"
+                >
+                  <b-form-input
+                    :id="'value-write-list-input-'+index_write"
+                    v-model="inputs[index_write].value"
+                    type="text"
+                    placeholder="Input the function's value"
+                  />
+                </b-form-group>
+              </b-col>
+              <b-col lg="4">
+                <b-button
+                  type="submit"
+                  @click="writeValue(index_write)"
+                >
+                  Submit {{ item.value }}
+                </b-button>
+              </b-col>
+            </b-row>
+          </div>
+        </div>
+      </b-form-group>
+    </b-card>
+    <b-card
+      bg-variant="light"
+      class="my-3"
+    >
+      <b-form-group
+        label-cols-lg="3"
+        label="Value Read List"
+        label-size="lg"
+        label-class="font-weight-bold pt-0"
+        class="mb-0"
+      >
+        <div
+          v-for="(item,index_write) in value_list_write"
+          :key="index_write"
+          :value="item"
+          class="my-3"
+        >
+          <div v-if="item.type==='r'">
+            <b-row>
+              <b-col lg="8">
+                <b-form-group
+                  label-cols-sm="3"
+                  :label="item.name + '：'"
+                  label-align-sm="right"
+                  label-for="driver-port-value"
+                >
+                  <b-form-input
+                    :id="'value-write-list-input-'+index_write"
+                    v-model="inputs[index_write].value"
+                  />
+                </b-form-group>
+              </b-col>
+            </b-row>
+          </div>
+        </div>
+      </b-form-group>
+    </b-card>
+  </b-container>
+</template>
+
+<script>
+    import axios from "axios";
+
+    export default {
+        name: "PageDeviceValue",
+        data: () => {
+            return {
+                value_list_write: [],
+                value_list_read: [],
+                inputs:[],
+                axiosResponse:[]
+            }
+        },
+        beforeCreate() {
+            console.log(this.$router.params)
+            const baseUrl = this.$store.state.url
+            const request = {
+                port: this.$router.params.port,
+                address: this.$router.params.address
+            }
+            axios.post(baseUrl + '/api/device/value', request).then(
+                (response) => {
+                    this.axiosResponse = response.data
+                    this.value_list_write = response.data
+                    this.value_list_read = response.data
+                }
+            ).catch((error) => {
+                console.log(error)
+            })
+            this.axiosResponse.forEach((item,index)=>{
+                let valueType = item[index].value
+                request.push({
+                    name:valueType
+                })
+                console.log('value request:',request)
+                axios.post(baseUrl + '/api/device/value/read').then(
+                    (response)=>{
+                        console.log('value response:',response)
+                        this.inputs.push({
+                            key:valueType,
+                            value:response.data.value
+                        })
+                    }
+                )
+            })
+        },
+        methods:{
+            writeValue(index) {
+                const baseUrl = this.$store.state.url
+                const request = {
+                    port: this.$router.params.port,
+                    address: this.$router.params.address,
+                    name: this.inputs[index].key,
+                    value: parseInt(this.inputs[index].value)
+                }
+                axios.post(baseUrl + '/api/device/value/write', request).then(
+                    (response)=>{
+                        alert("name:" + response.data.name + "\n" + "status:" + response.data.status + "\n" + "value:" + response.data.value + "\n")
+                    }
+                )
+            }
+        }
+    }
+</script>

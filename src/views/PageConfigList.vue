@@ -1,8 +1,19 @@
 <template>
   <main>
-    <h2 class="mb-3">
-      Update Config List
-    </h2>
+    <div id="nav">
+      <router-link to="/config/wifi">
+        Wifi
+      </router-link>
+      <router-link to="/config/io">
+        I/O
+      </router-link>
+      <router-link to="/config/ini">
+        Initial
+      </router-link>
+      <router-link to="/config/driver">
+        Driver
+      </router-link>
+    </div>
     <router-view />
   </main>
 </template>
