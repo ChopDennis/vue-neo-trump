@@ -6,8 +6,12 @@
       </router-link>
       <router-link to="/system/mainframe">
         Mainframe
-      </router-link><router-link to="/system/hostname">
+      </router-link>
+      <router-link to="/system/hostname">
         Hostname
+      </router-link>
+      <router-link to="/system/real-time">
+        Real-Time
       </router-link>
     </div>
     <router-view />

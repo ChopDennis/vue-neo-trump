@@ -56,6 +56,10 @@ const routes = [
             {
                 path: 'hostname',
                 component:()=>import('../components/SystemHostname')
+            },
+            {
+                path: 'real-time',
+                component:()=>import('../components/SystemRealTime')
             }
         ]
     },{
