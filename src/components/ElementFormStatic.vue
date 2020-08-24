@@ -1,28 +1,28 @@
 <template>
-    <div>
-        <b-container>
-            <b-card bg-variant="light">
-                <b-form-group
-                        label-cols-lg="4"
-                        :label="'Select ' + title"
-                        label-size="lg"
-                        label-class="font-weight-bold pt-0"
-                        class="mb-0"
-                >
-                    <ElementInputSelect
-                            :select-options="options"
-                            :element-id="elementId"
-                            @updateSelectValue="setSelectValue($event)"
-                    />
-                </b-form-group>
-            </b-card>
-        </b-container>
-        <ElementOutputList
-                :config="configData"
-                :read-only="readOnly"
-                @updateConfig="setNewConfigValue($event)"
-        />
-    </div>
+  <div>
+    <b-container>
+      <b-card bg-variant="light">
+        <b-form-group
+          label-cols-lg="4"
+          :label="'選擇' + title"
+          label-size="lg"
+          label-class="font-weight-bold pt-0"
+          class="mb-0"
+        >
+          <ElementInputSelect
+            :select-options="options"
+            :element-id="elementId"
+            @updateSelectValue="setSelectValue($event)"
+          />
+        </b-form-group>
+      </b-card>
+    </b-container>
+    <ElementOutputList
+      :config="configData"
+      :read-only="readOnly"
+      @updateConfig="setNewConfigValue($event)"
+    />
+  </div>
 </template>
 
 <script>

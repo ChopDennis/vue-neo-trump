@@ -1,13 +1,25 @@
 <template>
   <b-container>
     <b-card bg-variant="light">
-      <h4>System Log</h4>
-      <div class="bg-white border-info border p-3 rounded-lg overflow-auto" style="max-height: 80vh">
+      <h4>
+        <span class="fa fa-list-alt mx-3"></span>
+        系統日誌
+      </h4>
+      <div
+        class="bg-white border-info border p-3 rounded-lg overflow-auto"
+        style="max-height: 80vh"
+      >
         <pre class="text-left">{{ response.log }}</pre>
       </div>
 
-      <h4 class="mt-5">USB Log</h4>
-      <div class="bg-white border-info border p-3 rounded-lg overflow-auto " style="max-height: 80vh">
+      <h4 class="mt-5">
+        <span class="fa fa-usb mx-3"></span>
+        USB 外接裝置紀錄
+      </h4>
+      <div
+        class="bg-white border-info border p-3 rounded-lg overflow-auto "
+        style="max-height: 80vh"
+      >
         <pre class="text-left">{{ response.usb }}</pre>
       </div>
     </b-card>

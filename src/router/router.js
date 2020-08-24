@@ -66,6 +66,35 @@ const routes = [
         path: '/value',
         name: 'Value',
         component: Value
+    },
+    {
+        path: '/on-off',
+        name: 'OnOff',
+        component: () => import('../components/SystemOnOffControl')
+    },{
+        path: '/demo',
+        name: 'Demo',
+        component: () => import('../views/PageDemoList')
+    },{
+        path: '/light',
+        name: 'Light',
+        component: () => import('../views/PageLightList')
+    },{
+        path: '/a',
+        name: 'A',
+        component: () => import('../views/test/A')
+    },{
+        path: '/b',
+        name: 'B',
+        component: () => import('../views/test/B')
+    },{
+        path: '/c',
+        name: 'C',
+        component: () => import('../views/test/C')
+    },{
+        path: '/d',
+        name: 'D',
+        component: () => import('../views/test/D')
     }
 ]
 

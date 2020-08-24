@@ -2,13 +2,13 @@
   <div id="app">
     <div id="nav">
       <router-link to="/device">
-        Device
+        設備列表
       </router-link>
       <router-link to="/config/wifi">
-        Config
+        設定檔
       </router-link>
       <router-link to="/system/log">
-        System
+        系統控制
       </router-link>
     </div>
 

@@ -1,43 +1,21 @@
 <template>
-  <b-container>
-    <div
-      v-for="(item,key) in response.device"
-      :key="key"
-      :value="item"
-      class="my-3"
-    >
-      <b-button
-        v-b-toggle="'collapse-'+ key"
-        variant="info"
-        :to="'device/'+item.port+'/'+item.address+'/'"
-        @click="getValueList(item.port,item.address)"
+  <b-container class="my-3">
+      <b-card v-for="(item,key) in response.device"
+              :key="key"
+              :value="item"
+              class="mb-3"
+              :header="item.class"
+              header-bg-variant="dark"
+              header-text-variant="white"
+              header-class="font-weight-bold"
       >
-        {{ item.class }}<br>
-        {{ item.model }}
-      </b-button>
-      <b-collapse
-        :id="'collapse-'+key"
-        class="mt-2"
-      >
-        <b-card>
-          <p class="card-text">
-            {{ response.value[key] }}
-          </p>
-          <b-button
-            v-b-toggle.collapse-1-inner
-            size="sm"
-          >
-            Toggle Inner Collapse
-          </b-button>
-          <b-collapse
-            id="collapse-1-inner"
-            class="mt-2"
-          >
-            <b-card>Hello!</b-card>
-          </b-collapse>
-        </b-card>
-      </b-collapse>
-    </div>
+        <b-button variant="light" :to="'device/'+item.port+'/'+item.address+'/'"
+                     @click="getValueList(item.port,item.address)"
+                      class="text-dark"
+        >
+          {{item.model}}
+        </b-button>
+      </b-card>
     <router-view />
   </b-container>
 </template>

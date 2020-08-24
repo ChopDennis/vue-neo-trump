@@ -1,13 +1,14 @@
 <template>
   <div>
     <b-container>
+      <b-button variant="light" to="/device">回上一頁</b-button>
       <b-card
         bg-variant="light"
         class="my-3"
       >
         <b-form-group
           label-cols-lg="3"
-          label="Value Write List"
+          label="設備數值寫入"
           label-size="lg"
           label-class="font-weight-bold pt-0"
           class="mb-0"
@@ -31,7 +32,7 @@
                       :id="'value-write-list-input-'+index_write"
                       v-model="inputs[index_write].value"
                       type="text"
-                      placeholder="Input the function's value"
+                      placeholder="輸入功能數值"
                     />
                   </b-form-group>
                 </b-col>
@@ -40,7 +41,7 @@
                     type="submit"
                     @click="writeValue(index_write)"
                   >
-                    Submit {{ item.value }}
+                    寫入資料
                   </b-button>
                 </b-col>
               </b-row>
@@ -54,7 +55,7 @@
       >
         <b-form-group
           label-cols-lg="3"
-          label="Value Read List"
+          label="設備數值讀取"
           label-size="lg"
           label-class="font-weight-bold pt-0"
           class="mb-0"
@@ -78,7 +79,7 @@
                       :id="'value-write-list-input-'+index_write"
                       v-model="inputs[index_write].value"
                       type="text"
-                      placeholder="Click the 'read' button:"
+                      placeholder="點擊按鈕讀取數值"
                     />
                   </b-form-group>
                 </b-col>
@@ -87,7 +88,7 @@
                     type="submit"
                     @click="readValue(index_write)"
                   >
-                    Read {{ item.value }}
+                    讀取資料
                   </b-button>
                 </b-col>
               </b-row>

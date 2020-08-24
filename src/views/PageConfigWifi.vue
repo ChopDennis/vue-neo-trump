@@ -8,7 +8,7 @@
         class="mb-3"
         @click="insertInputs"
       >
-        Add More Input List
+        新增網路設定欄位
       </b-btn>
       <b-form-group
         v-for="(item,index) in wifiConfigData"
@@ -47,7 +47,7 @@
         type="submit"
         @click="updateWifiConfig"
       >
-        Submit
+       寫入設定
       </b-btn>
     </b-card>
   </b-container>
@@ -58,7 +58,7 @@
         name: "PageConfigWifi",
         data() {
             return {
-                title: "Wifi Config",
+                title: "Wifi 連線設定",
                 elementId: 'wifi-config-lists',
                 path: 'network',
                 options: {
@@ -87,9 +87,7 @@
         },
         methods: {
             show() {
-
                 console.log(this.wifiConfigData)
-
             },
             insertInputs() {
                 this.$store.commit('insertWifiConfigInput')

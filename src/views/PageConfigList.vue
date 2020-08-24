@@ -2,16 +2,16 @@
   <main>
     <div id="nav">
       <router-link to="/config/wifi">
-        Wifi
+        網路設定
       </router-link>
       <router-link to="/config/io">
-        I/O
+        讀取/寫入
       </router-link>
       <router-link to="/config/ini">
-        Initial
+        初始化設定
       </router-link>
       <router-link to="/config/driver">
-        Driver
+        驅動程式
       </router-link>
     </div>
     <router-view />

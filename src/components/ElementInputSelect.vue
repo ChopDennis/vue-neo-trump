@@ -1,7 +1,7 @@
 <template>
   <b-form-group
     label-cols-sm="3"
-    label="value:"
+    label="檔案名稱："
     label-align-sm="right"
     :label-for="elementId"
   >

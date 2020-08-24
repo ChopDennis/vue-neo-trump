@@ -1,28 +1,28 @@
 <template>
-    <div>
-        <h3>{{hostname}}</h3>
-        <b-container>
-            <b-card bg-variant="light">
-                <b-form-group
-                        label-cols-lg="4"
-                        label="Input your hostname: "
-                        label-size="lg"
-                        label-class="font-weight-bold pt-0"
-                        class="mb-0"
-                >
-                    <b-form-input
-                            v-model="hostname"
-                    >
-
-                    </b-form-input>
-                </b-form-group>
-                <b-btn class="mt-3" @click="postHostname">
-                    Submit
-                </b-btn>
-            </b-card>
-        </b-container>
-
-    </div>
+  <div>
+    <h3>{{ hostname }}</h3>
+    <b-container>
+      <b-card bg-variant="light">
+        <b-form-group
+          label-cols-lg="4"
+          label="輸入主機名稱："
+          label-size="lg"
+          label-class="font-weight-bold pt-0"
+          class="mb-0"
+        >
+          <b-form-input
+            v-model="hostname"
+          />
+        </b-form-group>
+        <b-btn
+          class="mt-3"
+          @click="postHostname"
+        >
+          送出
+        </b-btn>
+      </b-card>
+    </b-container>
+  </div>
 </template>
 
 <script>

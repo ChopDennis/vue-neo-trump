@@ -11,7 +11,7 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     state: {
-        // url: 'http://192.168.6.211',
+        // url: 'http://192.168.6.235',
         url: '',
         device: {
             port: "",
@@ -90,6 +90,7 @@ export const store = new Vuex.Store({
                 (response) => {
                     if (response.status === 200) {
                         console.log(response.data)
+                        alert("網路設定更新成功！")
                     }
                 }
             ).catch(

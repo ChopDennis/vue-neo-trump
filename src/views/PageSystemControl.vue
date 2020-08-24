@@ -2,25 +2,24 @@
   <b-container>
     <div id="nav">
       <router-link to="/system/log">
-        Log
+        系統日誌
       </router-link>
       <router-link to="/system/mainframe">
-        Mainframe
-      </router-link>
-      <router-link to="/system/hostname">
-        Hostname
+        主機控制
       </router-link>
       <router-link to="/system/real-time">
-        Real-Time
+        即時資料
       </router-link>
     </div>
     <router-view />
-    <b-btn
-            class="my-3 btn-danger"
-            @click="reboot"
-    >
-      Reboot System
-    </b-btn>
+    <b-button class="my-3 btn-danger" v-b-modal.reboot-alert>重啟系統</b-button>
+
+    <b-modal id="reboot-alert" title="警告" hide-footer header-bg-variant="danger" header-text-variant="white">
+      <p class="my-4 text-center">確定重啟系統？</p>
+      <b-button class="mt-3" variant="outline-danger" block @click="hideModal">是</b-button>
+      <b-button class="mt-3" variant="outline-info" block @click="reboot">否</b-button>
+
+    </b-modal>
   </b-container>
 </template>
 <script>
@@ -38,6 +37,9 @@
                     console.log(error)
                 })
             },
+          hideModal() {
+            this.$refs['reboot-alert'].hide()
+          },
         }
     }
 </script>

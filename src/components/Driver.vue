@@ -1,140 +1,141 @@
 <template>
-    <div id="example-2">
-        <b-container>
-            <b-card bg-variant="light">
-                <b-form-group
-                        label-cols-lg="3"
-                        label="Input Your Port List"
-                        label-size="lg"
-                        label-class="font-weight-bold pt-0"
-                        class="mb-0"
-                >
-                    <b-btn @click="addInputPort()">
-                        Add more input for port list
-                    </b-btn>
-                    <div
-                            v-for="(item,index) in inputs.port"
-                            :key="index"
-                    >
-                        <h4 class="text-left">
-                            {{ index + 1 }}.
-                        </h4>
-                        <b-form-group
-                                label-cols-sm="3"
-                                label="Name:"
-                                label-align-sm="right"
-                                label-for="driver-port-name"
-                        >
-                            <b-form-input
-                                    id="driver-port-name"
-                                    v-model="item.name"
-                                    type="text"
-                                    placeholder="Input the port's name."
-                            />
-                        </b-form-group>
-                        <b-form-group
-                                label-cols-sm="3"
-                                label="Port: "
-                                label-align-sm="right"
-                                label-for="driver-port-value"
-                        >
-                            <b-form-select
-                                    id="driver-port-value"
-                                    v-model="item.port"
-                                    :options="options.port.value"
-                            />
-                        </b-form-group>
-                    </div>
-                    <b-btn
-                            v-b-toggle.collapse-input-driver-list
-                            @click="setPortName()"
-                    >
-                        Update Driver List
-                    </b-btn>
-                </b-form-group>
-            </b-card>
-            <div
-                    id="collapse-input-driver-list"
-                    class="my-3"
-                    v-show="show.driverInputList"
+  <div id="example-2">
+    <b-container>
+      <b-card bg-variant="light">
+        <b-form-group
+          label-cols-lg="3"
+          label="輸入連接埠設定"
+          label-size="lg"
+          label-class="font-weight-bold pt-0"
+          class="mb-0"
+        >
+          <b-btn @click="addInputPort()">
+            新增連接埠設定欄位
+          </b-btn>
+          <div
+            v-for="(item,index) in inputs.port"
+            :key="index"
+          >
+            <h4 class="text-left">
+              {{ index + 1 }}.
+            </h4>
+            <b-form-group
+              label-cols-sm="3"
+              label="名稱："
+              label-align-sm="right"
+              label-for="driver-port-name"
             >
-                <b-card bg-variant="light">
-                    <b-form-group
-                            label-cols-lg="3"
-                            label="Input Your Driver List"
-                            label-size="lg"
-                            label-class="font-weight-bold pt-0"
-                            class="mb-0"
-                    >
-                        <b-btn @click="addInputDriver()">
-                            Add more input for driver list
-                        </b-btn>
-                        <div
-                                v-for="(item,index) in inputs.driver"
-                                :key="index"
-                        >
-                            <h4 class="text-left">
-                                {{ index + 1 }}.
-                            </h4>
-                            <b-form-group
-                                    label-cols-sm="3"
-                                    label="Model:"
-                                    label-align-sm="right"
-                                    label-for="driver-list-model"
-                            >
-                                <b-form-select
-                                        id="driver-list-model"
-                                        v-model="item.model"
-                                        :options="response.model"
-                                />
-                            </b-form-group>
-                            <b-form-group
-                                    label-cols-sm="3"
-                                    label="Port:"
-                                    label-align-sm="right"
-                                    label-for="driver-list-port"
-                            >
-                                <b-form-select
-                                        id="driver-list-port"
-                                        v-model="item.port"
-                                        :options="response.port"
-                                />
-                            </b-form-group>
-                            <b-form-group
-                                    label-cols-sm="3"
-                                    label="Address:"
-                                    label-align-sm="right"
-                                    label-for="driver-list-address"
-                            >
-                                <b-form-input
-                                        id="driver-list-address"
-                                        v-model="item.address"
-                                        type="number"
-                                        placeholder="Input the driver's address."
-                                />
-                            </b-form-group>
-                            <b-form-group
-                                    label-cols-sm="3"
-                                    label="Config:"
-                                    label-align-sm="right"
-                                    label-for="driver-list-config"
-                            >
-                                <b-form-input
-                                        id="driver-list-config"
-                                        v-model="item.config"
-                                        type="text"
-                                        placeholder="Input the driver's config."
-                                />
-                            </b-form-group>
-                        </div>
-                        <b-btn @click="writeConfig()">
-                            Submit Driver List
-                        </b-btn>
-                    </b-form-group>
-                </b-card>
+              <b-form-input
+                id="driver-port-name"
+                v-model="item.name"
+                type="text"
+                placeholder="Input the port's name."
+              />
+            </b-form-group>
+            <b-form-group
+              label-cols-sm="3"
+              label="連接埠："
+              label-align-sm="right"
+              label-for="driver-port-value"
+            >
+              <b-form-select
+                id="driver-port-value"
+                v-model="item.port"
+                :options="options.port.value"
+              />
+            </b-form-group>
+          </div>
+          <b-btn
+                  block
+            v-b-toggle.collapse-input-driver-list
+            @click="setPortName()"
+          >
+           完成連接埠設定
+          </b-btn>
+        </b-form-group>
+      </b-card>
+      <div
+        v-show="show.driverInputList"
+        id="collapse-input-driver-list"
+        class="my-3"
+      >
+        <b-card bg-variant="light">
+          <b-form-group
+            label-cols-lg="3"
+            label="輸入驅動程式設定"
+            label-size="lg"
+            label-class="font-weight-bold pt-0"
+            class="mb-0"
+          >
+            <b-btn @click="addInputDriver()">
+              新增驅動程式設定欄位
+            </b-btn>
+            <div
+              v-for="(item,index) in inputs.driver"
+              :key="index"
+            >
+              <h4 class="text-left">
+                {{ index + 1 }}.
+              </h4>
+              <b-form-group
+                label-cols-sm="3"
+                label="模組名稱："
+                label-align-sm="right"
+                label-for="driver-list-model"
+              >
+                <b-form-select
+                  id="driver-list-model"
+                  v-model="item.model"
+                  :options="response.model"
+                />
+              </b-form-group>
+              <b-form-group
+                label-cols-sm="3"
+                label="連接埠："
+                label-align-sm="right"
+                label-for="driver-list-port"
+              >
+                <b-form-select
+                  id="driver-list-port"
+                  v-model="item.port"
+                  :options="response.port"
+                />
+              </b-form-group>
+              <b-form-group
+                label-cols-sm="3"
+                label="記憶體位址："
+                label-align-sm="right"
+                label-for="driver-list-address"
+              >
+                <b-form-input
+                  id="driver-list-address"
+                  v-model="item.address"
+                  type="number"
+                  placeholder="Input the driver's address."
+                />
+              </b-form-group>
+              <b-form-group
+                label-cols-sm="3"
+                label="設定檔："
+                label-align-sm="right"
+                label-for="driver-list-config"
+              >
+                <b-form-input
+                  id="driver-list-config"
+                  v-model="item.config"
+                  type="text"
+                  placeholder="Input the driver's config."
+                />
+              </b-form-group>
             </div>
-        </b-container>
-    </div>
+            <b-btn block @click="writeConfig()">
+              更新驅動程式設定
+            </b-btn>
+          </b-form-group>
+        </b-card>
+      </div>
+    </b-container>
+  </div>
 </template>
 <script>
     import axios from 'axios'
@@ -201,7 +202,8 @@
                 console.log(request)
                 axios.post(baseUrl + '/api/config', request).then(
                     (response) => {
-                        alert(response.data.message)
+                      if(response.data.message==="Success")
+                        alert("驅動程式更新成功！")
                     }
                 )
             },

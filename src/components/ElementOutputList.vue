@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <h3 class="my-3">
-      Output List
+
     </h3>
     <b-card
       v-for="(item,index) in dataList"
@@ -39,7 +39,7 @@
         v-show="!readOnly"
         @click="submitNewValue"
       >
-        Submit
+        寫入數值
       </b-btn>
     </b-card>
   </b-container>

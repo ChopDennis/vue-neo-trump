@@ -1,15 +1,15 @@
 <template>
-    <div>
-        <span
-                class="fa toggle"
-                :class="{'fa-toggle-on': toggled, 'fa-toggle-off': !toggled, 'text-success': toggled, 'text-muted': !toggled}"
-                @click="toggleButton"
-        />
-        <span
-                v-show="label"
-                class="toggle-label"
-        >{{ label }}</span>
-    </div>
+  <div>
+    <span
+      class="fa toggle"
+      :class="{'fa-toggle-on': toggled, 'fa-toggle-off': !toggled, 'text-success': toggled, 'text-muted': !toggled}"
+      @click="toggleButton"
+    />
+    <span
+      v-show="label"
+      class="toggle-label"
+    >{{ label }}</span>
+  </div>
 </template>
 
 <script>

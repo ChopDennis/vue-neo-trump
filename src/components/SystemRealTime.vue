@@ -1,6 +1,5 @@
 <template>
-    <b-container v-html="response">
-    </b-container>
+  <b-container v-html="response" />
 </template>
 
 <script>

@@ -1,15 +1,15 @@
 <template>
-    <main>
-        <ElementFormStatic
-                :title="title"
-                :element-id="elementId"
-                :path="path"
-                :options="options"
-                :config-data="configData"
-                :read-only="readOnly"
-                @updateSelectValue="setIniConfigData($event)"
-        />
-    </main>
+  <main>
+    <ElementFormStatic
+      :title="title"
+      :element-id="elementId"
+      :path="path"
+      :options="options"
+      :config-data="configData"
+      :read-only="readOnly"
+      @updateSelectValue="setIniConfigData($event)"
+    />
+  </main>
 </template>
 
 <script>
@@ -22,7 +22,7 @@
         },
         data() {
             return {
-                title: "Initial Config Type",
+                title: "「初始化」設定檔",
                 elementId: 'ini-config-type',
                 path: 'ini',
                 options: [

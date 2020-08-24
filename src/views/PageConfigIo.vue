@@ -22,7 +22,7 @@
         },
         data: () => {
             return {
-                title: "IO Config Name",
+                title: "「讀取/寫入」設定檔",
                 elementId: 'io-config-lists',
                 path: 'io',
                 options: [],
