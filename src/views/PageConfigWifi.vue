@@ -27,16 +27,19 @@
           label-align-sm="right"
         >
           <b-form-select
+                  required
             v-if="key==='priority'"
             v-model="wifiConfigData[index][key]"
             :options="options.priority"
           />
           <b-form-select
+                  required
             v-else-if="key==='key_mgmt'"
             v-model="wifiConfigData[index][key]"
             :options="options.ket_mgmt"
           />
           <b-form-input
+                  required
             v-else
             v-model="wifiConfigData[index][key]"
             type="text"

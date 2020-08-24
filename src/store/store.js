@@ -86,18 +86,35 @@ export const store = new Vuex.Store({
             )
         },
         postWifiConfig(state) {
-            axios.post(state.url + '/api/config/network', state.config.wifi.data).then(
-                (response) => {
-                    if (response.status === 200) {
-                        console.log(response.data)
-                        alert("網路設定更新成功！")
+            let postValid = false
+            state.config.wifi.data.forEach((item) => {
+                    console.log(item.ssid + item.psk)
+                    if (item.ssid && item.psk) {
+                        postValid = true
+                        console.log(postValid)
+                    }
+                    else {
+                        alert("錯誤，禁止輸入空格！")
+                        postValid = false
+                        console.log(postValid)
                     }
                 }
-            ).catch(
-                (error) => {
-                    console.log(error)
-                }
             )
+            if(postValid){
+                axios.post(state.url + '/api/config/network', state.config.wifi.data).then(
+                    (response) => {
+                        if (response.status === 200) {
+                            console.log(response.data)
+                            alert("網路設定更新成功！")
+                        }
+                    }
+                ).catch(
+                    (error) => {
+                        console.log(error)
+                    }
+                )
+            }
+
         }
     },
     getters: {
