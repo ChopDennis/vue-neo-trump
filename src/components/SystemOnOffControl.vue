@@ -1,38 +1,6 @@
 <template>
   <div>
     <b-container>
-      <b-card
-        bg-variant="light"
-        class="mb-5"
-      >
-        <b-form-group
-          label-cols-lg="4"
-          label="Input the power name:"
-          label-size="md"
-          label-class="font-weight-bold pt-0"
-          class="mb-3"
-        >
-          <b-input
-            v-model="input"
-          />
-        </b-form-group>
-        <b-form-group
-          label-cols-lg="4"
-          label="Select the power type:"
-          label-size="md"
-          label-class="font-weight-bold pt-0"
-          class="mb-3"
-        >
-          <b-form-select
-            v-model="select"
-            :options="powerOption"
-            required
-          />
-        </b-form-group>
-        <b-btn @click="insertLightList">
-          Submit
-        </b-btn>
-      </b-card>
       <h3>B4F 燈光設備</h3>
       <b-card
         v-for="(item,index) in lightList"
@@ -102,7 +70,7 @@
           <b-col cols="4">
             <ElementSwitchToggle
               :toggled.sync="item.toggled"
-              @toggleButton="changeToggleValue(index)"
+              @toggleButton="changePowerToggleValue(index)"
             />
           </b-col>
         </b-row>
