@@ -27,21 +27,21 @@
           label-align-sm="right"
         >
           <b-form-select
-                  required
             v-if="key==='priority'"
             v-model="wifiConfigData[index][key]"
+            required
             :options="options.priority"
           />
           <b-form-select
-                  required
             v-else-if="key==='key_mgmt'"
             v-model="wifiConfigData[index][key]"
+            required
             :options="options.ket_mgmt"
           />
           <b-form-input
-                  required
             v-else
             v-model="wifiConfigData[index][key]"
+            required
             type="text"
           />
         </b-form-group>
@@ -50,7 +50,7 @@
         type="submit"
         @click="updateWifiConfig"
       >
-       寫入設定
+        寫入設定
       </b-btn>
     </b-card>
   </b-container>

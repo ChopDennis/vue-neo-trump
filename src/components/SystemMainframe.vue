@@ -1,68 +1,71 @@
 <template>
-    <div>
-        <b-container>
-            <b-card bg-variant="light">
-                <b-row class="mb-3">
-                    <b-col cols="8" lg="4">
-                        <h5 class="d-none d-lg-block font-weight-bold">
-                            <span class="fa fa-power-off mx-3"></span>主機開關
-                        </h5>
-                        <h5
-                                class="d-lg-none"
-                                style="line-height: 40px"
-                        >
-                            <span class="fa fa-power-off mx-3"></span>主機開關
-                        </h5>
-                    </b-col>
-                    <b-col cols="4">
-                        <ElementSwitchToggle
-                                :toggled.sync="$store.state.system.mainframe.toggled"
-                                @toggleButton="changeToggleValue"
-                        />
-                    </b-col>
-                </b-row>
-                <b-form-group
-                        label-cols-lg="4"
-                        label="目前主機名稱："
-                        label-size="lg"
-                        label-class="font-weight-bold pt-0"
-                        class="mb-3"
-                >
-                    <b-form-input
-                            disabled
-                            v-model="hostnameOld"
-                    />
-                </b-form-group>
-                <b-form-group
-                        label-cols-lg="4"
-                        label="更新主機名稱："
-                        label-size="lg"
-                        label-class="font-weight-bold pt-0"
-                        class="mb-0"
-                >
-                    <b-form-input
-                            v-model="hostname"
-                    />
-                </b-form-group>
-                <div class="m-auto w-25">
-                    <b-btn
-                            class="my-3"
-                            block
-                            @click="postHostname"
-                    >
-                        送出
-                    </b-btn>
-                </div>
+  <div>
+    <b-container>
+      <b-card bg-variant="light">
+        <b-row class="mb-3">
+          <b-col
+            cols="8"
+            lg="4"
+          >
+            <h5 class="d-none d-lg-block font-weight-bold">
+              <span class="fa fa-power-off mx-3" />主機開關
+            </h5>
+            <h5
+              class="d-lg-none"
+              style="line-height: 40px"
+            >
+              <span class="fa fa-power-off mx-3" />主機開關
+            </h5>
+          </b-col>
+          <b-col cols="4">
+            <ElementSwitchToggle
+              :toggled.sync="$store.state.system.mainframe.toggled"
+              @toggleButton="changeToggleValue"
+            />
+          </b-col>
+        </b-row>
+        <b-form-group
+          label-cols-lg="4"
+          label="目前主機名稱："
+          label-size="lg"
+          label-class="font-weight-bold pt-0"
+          class="mb-3"
+        >
+          <b-form-input
+            v-model="hostnameOld"
+            disabled
+          />
+        </b-form-group>
+        <b-form-group
+          label-cols-lg="4"
+          label="更新主機名稱："
+          label-size="lg"
+          label-class="font-weight-bold pt-0"
+          class="mb-0"
+        >
+          <b-form-input
+            v-model="hostname"
+          />
+        </b-form-group>
+        <div class="m-auto w-25">
+          <b-btn
+            class="my-3"
+            block
+            @click="postHostname"
+          >
+            送出
+          </b-btn>
+        </div>
 
-                <div
-                        class="bg-white border-info border p-3 rounded-lg overflow-auto"
-                        style="max-height: 80vh"
-                >
-                    <pre class="text-left">{{ log }}</pre>
-                </div>
-            </b-card>
-        </b-container>
-    </div>
+        <div
+          class="bg-white border-info border p-3 rounded-lg overflow-auto"
+          style="max-height: 80vh"
+        >
+          <pre class="text-left">{{ log }}</pre>
+        </div>
+      </b-card>
+    </b-container>
+  </div>
 </template>
 
 <script>

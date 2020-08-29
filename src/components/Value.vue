@@ -1,7 +1,12 @@
 <template>
   <div>
     <b-container>
-      <b-button variant="light" to="/device">回上一頁</b-button>
+      <b-button
+        variant="light"
+        to="/device"
+      >
+        回上一頁
+      </b-button>
       <b-card
         bg-variant="light"
         class="my-3"

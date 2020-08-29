@@ -5,6 +5,25 @@ Vue.use(VueRouter)
 
 const routes = [
     {
+        path: '/',
+        name: 'Home',
+        component: () => import('../views/Home')
+    },
+    {
+        path: '/on-off',
+        name: 'OnOff',
+        component: () => import('../views/PagePowerController'),
+    },
+    {
+        path: '/status',
+        name: 'Status',
+        component: () => import('../views/PageDeviceStatus'),
+    }, {
+        path: '/system',
+        name: 'System',
+        component: () => import('../views/PageCentralSystem'),
+    },
+    {
         path: '/device',
         name: 'Device',
         component: () => import('../components/Device'),

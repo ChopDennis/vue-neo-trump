@@ -1,8 +1,6 @@
 <template>
   <b-container>
-    <h3 class="my-3">
-
-    </h3>
+    <h3 class="my-3" />
     <b-card
       v-for="(item,index) in dataList"
       :key="index"

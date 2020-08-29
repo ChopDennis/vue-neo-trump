@@ -46,11 +46,11 @@
             </b-form-group>
           </div>
           <b-btn
-                  block
             v-b-toggle.collapse-input-driver-list
+            block
             @click="setPortName()"
           >
-           完成連接埠設定
+            完成連接埠設定
           </b-btn>
         </b-form-group>
       </b-card>
@@ -128,7 +128,10 @@
                 />
               </b-form-group>
             </div>
-            <b-btn block @click="writeConfig()">
+            <b-btn
+              block
+              @click="writeConfig()"
+            >
               更新驅動程式設定
             </b-btn>
           </b-form-group>

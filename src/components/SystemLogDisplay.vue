@@ -2,7 +2,7 @@
   <b-container>
     <b-card bg-variant="light">
       <h4>
-        <span class="fa fa-list-alt mx-3"></span>
+        <span class="fa fa-list-alt mx-3" />
         系統日誌
       </h4>
       <div
@@ -13,7 +13,7 @@
       </div>
 
       <h4 class="mt-5">
-        <span class="fa fa-usb mx-3"></span>
+        <span class="fa fa-usb mx-3" />
         USB 外接裝置紀錄
       </h4>
       <div
