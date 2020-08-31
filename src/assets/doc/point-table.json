@@ -37,7 +37,8 @@
         "error": "DIn03"
       },{
         "name": "B梯 廢水池",
-        "status": "DIn04"
+        "status": 1,
+        "error": "DIn04"
       }
     ],
     "19": [
@@ -51,8 +52,8 @@
         "error": "DIn03"
       },{
         "name": "A梯 廢水池",
-        "status": "DIn04",
-        "error": -1
+        "status": 1,
+        "error": "DIn04"
       }
     ]
   }

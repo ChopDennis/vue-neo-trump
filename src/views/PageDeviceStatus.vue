@@ -12,36 +12,36 @@
                 樓層
               </p>
             </b-col>
-              <b-col cols="12">
-                  <h3 class="mt-4">
-                      B2F
-                  </h3>
-              </b-col>
-              <b-col cols="12">
-                  <h3 class="mt-4">
-                      B1F
-                  </h3>
-              </b-col>
-              <b-col cols="12">
-                  <h3 class="mt-4">
-                      1F
-                  </h3>
-              </b-col>
-              <b-col cols="12">
-                  <h3 class="mt-4">
-                      2F
-                  </h3>
-              </b-col>
-              <b-col cols="12">
-                  <h3 class="mt-4">
-                      3F
-                  </h3>
-              </b-col>
-              <b-col cols="12">
-                  <h3 class="mt-4">
-                      4F
-                  </h3>
-              </b-col>
+            <b-col cols="12">
+              <h3 class="mt-4">
+                B2F
+              </h3>
+            </b-col>
+            <b-col cols="12">
+              <h3 class="mt-4">
+                B1F
+              </h3>
+            </b-col>
+            <b-col cols="12">
+              <h3 class="mt-4">
+                1F
+              </h3>
+            </b-col>
+            <b-col cols="12">
+              <h3 class="mt-4">
+                2F
+              </h3>
+            </b-col>
+            <b-col cols="12">
+              <h3 class="mt-4">
+                3F
+              </h3>
+            </b-col>
+            <b-col cols="12">
+              <h3 class="mt-4">
+                4F
+              </h3>
+            </b-col>
           </b-row>
         </b-col>
         <b-col cols="10">

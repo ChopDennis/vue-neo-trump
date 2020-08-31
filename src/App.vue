@@ -1,12 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">首頁</router-link> |
-      <router-link to="/system">中控系統</router-link> |
-      <router-link to="/status">設備運轉狀態</router-link> |
-      <router-link to="/on-off">設備起停</router-link>
+      <router-link to="/">
+        首頁
+      </router-link> |
+      <router-link to="/system">
+        中控系統
+      </router-link> |
+      <router-link to="/status">
+        設備運轉狀態
+      </router-link> |
+      <router-link to="/on-off">
+        設備起停
+      </router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

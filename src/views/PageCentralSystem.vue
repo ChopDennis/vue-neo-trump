@@ -105,6 +105,7 @@
 
 <script>
     import point from "../assets/doc/point-table.json"
+
     export default {
         name: "PageCentralSystem",
         data() {
@@ -112,38 +113,55 @@
                 pump: [],
                 waste: point["waste_water"],
                 myJson: point,
-                systemSelected:"",
-                deviceList:[
-                    { text: "揚水系統", value: "lifting_pump" },
-                    { text: "廢水系統", value: "waste_water" },
+                systemSelected: "",
+                deviceList: [
+                    {text: "揚水系統", value: "lifting_pump"},
+                    {text: "廢水系統", value: "waste_water"},
                 ],
-                deviceAmount:{
-                    "lifting_pump":2,
-                    "waste_water":3
+                deviceAmount: {
+                    "lifting_pump": 2,
+                    "waste_water": 3
                 },
-                deviceName:{
-                    "lifting_pump":"揚水系統",
-                    "waste_water":"廢水系統",
+                deviceName: {
+                    "lifting_pump": "揚水系統",
+                    "waste_water": "廢水系統",
                 }
             }
         },
         created() {
-          this.Test()
+            this.Test()
         },
-        methods:{
-            Test(){
+        methods: {
+            Test() {
                 this.axios.get("/api/device/value/read_lifting_pump").then(
                     (response) => {
                         console.log(response)
                         let rex = /^DIn/
-                        response.data.forEach((item)=>{
-                            if(rex.test(item.name)){
-                                this.pump.push(item)
-                                this.myJson["lifting_pump"][item.address].forEach((device)=>{
-                                    if(device.status === item.name){
+                        response.data.forEach((item) => {
+                            if (rex.test(item.name)) {
+                                this.myJson["lifting_pump"][item.address].forEach((device) => {
+                                    if (device.status === item.name) {
                                         device.status = item.status
+                                    } else if (device.error === item.name) {
+                                        device.error = item.status
                                     }
-                                    else if(device.error === item.name){
+                                })
+                            }
+                        })
+                    }
+                ).catch((error) => {
+                    console.log(error)
+                })
+                this.axios.get("/api/device/value/read_waste_water").then(
+                    (response) => {
+                        console.log(response)
+                        let rex = /^DIn/
+                        response.data.forEach((item) => {
+                            if (rex.test(item.name)) {
+                                this.myJson["waste_water"][item.address].forEach((device) => {
+                                    if (device.status === item.name) {
+                                        device.status = item.status
+                                    } else if (device.error === item.name) {
                                         device.error = item.status
                                     }
                                 })
