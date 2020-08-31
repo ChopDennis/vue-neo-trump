@@ -31,11 +31,13 @@
         "name": "B梯 #1 廢水泵",
         "status": "DIn01",
         "error": "DIn03"
-      },{
+      },
+      {
         "name": "B梯 #2 廢水泵",
         "status": "DIn02",
         "error": "DIn03"
-      },{
+      },
+      {
         "name": "B梯 廢水池",
         "status": 1,
         "error": "DIn04"
@@ -46,14 +48,73 @@
         "name": "A梯 #1 廢水泵",
         "status": "DIn01",
         "error": "DIn03"
-      },{
+      },
+      {
         "name": "A梯 #2 廢水泵",
         "status": "DIn02",
         "error": "DIn03"
-      },{
+      },
+      {
         "name": "A梯 廢水池",
         "status": 1,
         "error": "DIn04"
+      }
+    ]
+  },
+  "sewage": {
+    "18": [
+      {
+        "name": "B梯 #1 污水泵",
+        "status": "DIn01",
+        "error": "DIn03"
+      },
+      {
+        "name": "B梯 #2 汙水泵",
+        "status": "DIn02",
+        "error": "DIn03"
+      },
+      {
+        "name": "B梯 污水池",
+        "status": 1,
+        "error": "DIn04"
+      }
+    ]
+  },
+  "fire": {
+    "12": [
+      {
+        "name": "消防泵",
+        "status": "DIn01",
+        "error": "DIn04"
+      },
+      {
+        "name": "消防泵 缺水",
+        "status": 0,
+        "error": "DIn03"
+      }
+    ],
+    "13": [
+      {
+        "name": "撒水泵",
+        "status": "DIn01",
+        "error": "DIn04"
+      },
+      {
+        "name": "撒水泵 缺水",
+        "status": 0,
+        "error": "DIn03"
+      }
+    ],
+    "14": [
+      {
+        "name": "泡沫泵",
+        "status": "DIn01",
+        "error": "DIn04"
+      },
+      {
+        "name": "泡沫泵 缺水",
+        "status": 0,
+        "error": "DIn03"
       }
     ]
   }

@@ -15,6 +15,7 @@
           <b-form-select
             v-model="systemSelected"
             :options="deviceList"
+            @change="readCentralSystem"
           />
         </b-form-group>
       </b-card>
@@ -117,29 +118,36 @@
                 deviceList: [
                     {text: "揚水系統", value: "lifting_pump"},
                     {text: "廢水系統", value: "waste_water"},
+                    {text: "污水系統", value: "sewage"},
+                    {text: "消防系統", value: "fire"},
                 ],
                 deviceAmount: {
                     "lifting_pump": 2,
-                    "waste_water": 3
+                    "waste_water": 3,
+                    "sewage":3,
+                    "fire":2,
+
                 },
                 deviceName: {
                     "lifting_pump": "揚水系統",
                     "waste_water": "廢水系統",
+                    "sewage": "汙水系統",
+                    "fire": "消防系統",
                 }
             }
         },
         created() {
-            this.Test()
         },
         methods: {
-            Test() {
-                this.axios.get("/api/device/value/read_lifting_pump").then(
+            readCentralSystem() {
+                let apiURL = "/api/device/value/read_" + this.systemSelected
+                this.axios.get(apiURL).then(
                     (response) => {
                         console.log(response)
                         let rex = /^DIn/
                         response.data.forEach((item) => {
                             if (rex.test(item.name)) {
-                                this.myJson["lifting_pump"][item.address].forEach((device) => {
+                                this.myJson[this.systemSelected][item.address].forEach((device) => {
                                     if (device.status === item.name) {
                                         device.status = item.status
                                     } else if (device.error === item.name) {
@@ -152,25 +160,9 @@
                 ).catch((error) => {
                     console.log(error)
                 })
-                this.axios.get("/api/device/value/read_waste_water").then(
-                    (response) => {
-                        console.log(response)
-                        let rex = /^DIn/
-                        response.data.forEach((item) => {
-                            if (rex.test(item.name)) {
-                                this.myJson["waste_water"][item.address].forEach((device) => {
-                                    if (device.status === item.name) {
-                                        device.status = item.status
-                                    } else if (device.error === item.name) {
-                                        device.error = item.status
-                                    }
-                                })
-                            }
-                        })
-                    }
-                ).catch((error) => {
-                    console.log(error)
-                })
+            },
+            Alert() {
+                alert(this.systemSelected)
             }
         }
     }
