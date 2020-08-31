@@ -128,11 +128,11 @@
             }
         },
         created() {
-
+          this.Test()
         },
         methods:{
             Test(){
-                this.axios.get("http://192.168.6.235/api/device/value/read_lifting_pump").then(
+                this.axios.get("/api/device/value/read_lifting_pump").then(
                     (response) => {
                         console.log(response)
                         let rex = /^DIn/
