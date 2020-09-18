@@ -11,8 +11,8 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     state: {
-        // url: 'http://192.168.6.235',
-        url: '',
+        url: 'http://192.168.1.10',
+        // url: '',
         device: {
             port: "",
             address: ""

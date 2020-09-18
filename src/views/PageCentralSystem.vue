@@ -70,7 +70,7 @@
                     class="mb-2"
                     style="color: #42b983"
                   >
-                    <b-icon-file-check-fill class="mx-1" />
+                    <b-icon-check-square-fill class="mx-1" />
                     <span>設備運行中</span>
                   </b-col>
                 </b-row>
@@ -78,6 +78,7 @@
             </div>
             <div v-else>
               <b-card
+                v-if="item.error === 1"
                 :header="item.name"
                 header-tag="header"
                 header-text-variant="white"
@@ -96,6 +97,23 @@
                   </b-col>
                 </b-row>
               </b-card>
+              <b-card
+                v-else
+                :header="item.name"
+                header-tag="header"
+              >
+                <b-card-text />
+                <b-row>
+                  <b-col
+                    cols="12"
+                    class="mb-2"
+                    style="color: darkgray"
+                  >
+                    <b-icon-clock-history class="mx-1" />
+                    <span>等待設備回應...</span>
+                  </b-col>
+                </b-row>
+              </b-card>
             </div>
           </b-col>
         </b-row>
@@ -111,28 +129,25 @@
         name: "PageCentralSystem",
         data() {
             return {
-                pump: [],
-                waste: point["waste_water"],
                 myJson: point,
                 systemSelected: "",
                 deviceList: [
                     {text: "揚水系統", value: "lifting_pump"},
                     {text: "廢水系統", value: "waste_water"},
                     {text: "污水系統", value: "sewage"},
-                    {text: "消防系統", value: "fire"},
+                    {text: "進出風系統", value: "fan"},
                 ],
                 deviceAmount: {
                     "lifting_pump": 2,
                     "waste_water": 3,
-                    "sewage":3,
-                    "fire":2,
-
+                    "sewage": 3,
+                    "fan": 1,
                 },
                 deviceName: {
                     "lifting_pump": "揚水系統",
                     "waste_water": "廢水系統",
                     "sewage": "汙水系統",
-                    "fire": "消防系統",
+                    "fan": "進出風系統",
                 }
             }
         },
