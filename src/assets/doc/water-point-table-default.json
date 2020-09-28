@@ -1,0 +1,86 @@
+{
+  "7": [
+    {
+      "name": "加壓泵",
+      "status": 99,
+      "error": 0
+    }
+  ],
+  "15": [
+    {
+      "name": "#1 揚水泵50HP",
+      "status": 99,
+      "error": 0
+    },
+    {
+      "name": "#2 揚水泵50HP",
+      "status": 99,
+      "error": 0
+    }
+  ],
+  "16": [
+    {
+      "name": "#3 揚水泵10HP",
+      "status": 99,
+      "error": 0
+    },
+    {
+      "name": "#4 揚水泵10HP",
+      "status": 99,
+      "error": 0
+    }
+  ],
+  "17": [
+    {
+      "name": "B梯 #1 廢水泵",
+      "status": 99,
+      "error": 0
+    },
+    {
+      "name": "B梯 #2 廢水泵",
+      "status": 99,
+      "error": 0
+    },
+    {
+      "name": "B梯 廢水池",
+      "status": 99,
+      "error": 0
+    }
+  ],
+  "19": [
+    {
+      "name": "A梯 #1 廢水泵",
+      "status": 99,
+      "error": 0
+    },
+    {
+      "name": "A梯 #2 廢水泵",
+      "status": 99,
+      "error": 0
+    },
+    {
+      "name": "A梯 廢水池",
+      "status": 99,
+      "error": 0
+    }
+  ],
+  "18": [
+    {
+      "name": "B梯 #1 污水泵",
+      "status": 99,
+      "error": 0
+    },
+    {
+      "name": "B梯 #2 汙水泵",
+      "status": 99,
+      "error": 0
+    },
+    {
+      "name": "B梯 污水池",
+      "status": 99,
+      "error": 0
+    }
+  ]
+}
+
+

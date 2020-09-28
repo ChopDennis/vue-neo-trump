@@ -9,21 +9,18 @@
           sm="4"
           class="mb-sm-0 mb-3"
         >
-          <span class="text-center text-light ">NEO TRUMP</span>
+          <span class="text-center text-light font-weight-bold">NEO TRUMP 新川普</span>
         </b-col>
         <b-col sm="8">
           <router-link to="/">
-            首頁
+            進排風系統
           </router-link> |
           <router-link to="/system">
-            中控系統
+            揚汙廢水系統
           </router-link> |
           <router-link to="/light">
-            設備運轉狀態
-          </router-link> |
-          <router-link to="/on-off">
-            設備起停
-          </router-link> |
+            燈控系統
+          </router-link>
         </b-col>
       </b-row>
     </div>
@@ -41,7 +38,7 @@
   }
 
   #app-nav {
-    padding: 2rem;
+    padding: 1rem;
     background-color: lightslategrey;
     color: whitesmoke;
   }

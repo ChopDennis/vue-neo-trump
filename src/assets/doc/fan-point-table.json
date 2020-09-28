@@ -1,0 +1,58 @@
+{
+  "3": [
+    {
+      "name": "B1F 20HP排風機",
+      "status": "DIn01",
+      "error": "DIn04"
+    }
+  ],
+  "4": [
+    {
+      "name": "B1F 10HP進風機",
+      "status": "DIn01",
+      "error": "DIn04"
+    }
+  ],
+  "5": [
+    {
+      "name": "B2F 15HP進風機",
+      "status": "DIn01",
+      "error": "DIn04"
+    }
+  ],
+  "6": [
+    {
+      "name": "B2F 20HP排風機",
+      "status": "DIn01",
+      "error": "DIn04"
+    }
+  ],
+  "8": [
+    {
+      "name": "B3F 15HP進風機",
+      "status": "DIn01",
+      "error": "DIn04"
+    }
+  ],
+  "9": [
+    {
+      "name": "B3F 25HP排風機",
+      "status": "DIn01",
+      "error": "DIn04"
+    }
+  ],
+  "10": [
+    {
+      "name": "B4F 25HP排風機",
+      "status": "DIn01",
+      "error": "DIn04"
+    }
+  ],
+  "11": [
+    {
+      "name": "B4F 15HP進風機",
+      "status": "DIn01",
+      "error": "DIn04"
+    }
+  ]
+}

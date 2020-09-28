@@ -1,0 +1,86 @@
+{
+  "7": [
+    {
+      "name": "加壓泵",
+      "status": -1,
+      "error": "DIn04"
+    }
+  ],
+  "15": [
+    {
+      "name": "#1 揚水泵50HP",
+      "status": "DIn01",
+      "error": "DIn03"
+    },
+    {
+      "name": "#2 揚水泵50HP",
+      "status": "DIn02",
+      "error": "DIn04"
+    }
+  ],
+  "16": [
+    {
+      "name": "#3 揚水泵10HP",
+      "status": "DIn01",
+      "error": "DIn03"
+    },
+    {
+      "name": "#4 揚水泵10HP",
+      "status": "DIn02",
+      "error": "DIn04"
+    }
+  ],
+  "17": [
+    {
+      "name": "B梯 #1 廢水泵",
+      "status": "DIn01",
+      "error": "DIn03"
+    },
+    {
+      "name": "B梯 #2 廢水泵",
+      "status": "DIn02",
+      "error": "DIn03"
+    },
+    {
+      "name": "B梯 廢水池",
+      "status": -1,
+      "error": "DIn04"
+    }
+  ],
+  "19": [
+    {
+      "name": "A梯 #1 廢水泵",
+      "status": "DIn01",
+      "error": "DIn03"
+    },
+    {
+      "name": "A梯 #2 廢水泵",
+      "status": "DIn02",
+      "error": "DIn03"
+    },
+    {
+      "name": "A梯 廢水池",
+      "status": -1,
+      "error": "DIn04"
+    }
+  ],
+  "18": [
+    {
+      "name": "B梯 #1 污水泵",
+      "status": "DIn01",
+      "error": "DIn03"
+    },
+    {
+      "name": "B梯 #2 汙水泵",
+      "status": "DIn02",
+      "error": "DIn03"
+    },
+    {
+      "name": "B梯 污水池",
+      "status": -1,
+      "error": "DIn04"
+    }
+  ]
+}
+
+
