@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="py-3">
     <b-container>
       <b-modal
               ref="device-error"
@@ -13,18 +13,25 @@
           有設備異常，請儘速至現場檢查，並聯絡技術人員。
         </p>
       </b-modal>
-      <h4 class="mt-5">進排風系統</h4>
-      <b-row>
-        <b-col lg="3" class="py-3"
-               v-for="(item, index) in defaultTable"
-               :key="'fan-'+index"
-        >
-          <div>
-            <SystemInfoCard :name="item[0].name" :error="item[0].error" :status="item[0].status"></SystemInfoCard>
+      <b-card
+              header="進排風系統"
+              header-text-variant="white"
+              header-class="font-weight-bold dark-blue"
+              class="mb-3 border-0"
+      >
+        <b-row>
+          <b-col lg="3" class="py-3"
+                 v-for="(item, index) in defaultTable"
+                 :key="'fan-'+index"
+          >
+            <div>
+              <SystemInfoCard :name="item[0].name" :error="item[0].error" :status="item[0].status"></SystemInfoCard>
 
-          </div>
-        </b-col>
-      </b-row>
+            </div>
+          </b-col>
+        </b-row>
+      </b-card>
+
     </b-container>
   </main>
 </template>
@@ -43,36 +50,15 @@
       return {
         defaultTable: defaultData,
         pointTable: devicePoints,
-        axiosResponse: [],
         errorFlag: false,
-        systemSelected: "",
-        deviceList: [
-          {text: "揚水系統", value: "lifting_pump"},
-          {text: "廢水系統", value: "waste_water"},
-          {text: "污水系統", value: "sewage"},
-          {text: "進出風系統", value: "fan"},
-        ],
-        deviceAmount: {
-          "lifting_pump": 2,
-          "waste_water": 3,
-          "sewage": 3,
-          "fan": 1,
-        },
-        deviceName: {
-          "lifting_pump": "B4F 揚水系統",
-          "waste_water": "B4F 廢水系統",
-          "sewage": "B4F 汙水系統",
-          "fan": "進出風系統",
-        }
       }
     },
     beforeMount() {
-      this.readWaterSystem()
-
+      this.readFanSystem()
     },
     methods: {
-      readWaterSystem() {
-        let apiURL = "http://192.168.1.10/api/device/value/read_fan"
+      readFanSystem() {
+        let apiURL = "http://192.168.1.10/api/device/value/read_fan_000"
         this.axios.get(apiURL).then(
                 (response) => {
                   let rex = /^DIn/
@@ -113,5 +99,12 @@
 </script>
 
 <style scoped>
-
+  main{
+    background: linear-gradient(to bottom left, #939121, #4d8a21, #34811f, #2b5b17);
+    margin-top:-1rem;
+    min-height: 100vh;
+  }
+  .dark-blue {
+    background-color: #40972c;
+  }
 </style>
