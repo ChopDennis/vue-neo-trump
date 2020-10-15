@@ -1,0 +1,65 @@
+{
+  "2": [
+    {
+      "name": "1F 後門矮柱燈",
+      "status": "DIn01"
+    },
+    {
+      "name": "1F 壁燈＋地理投射燈",
+      "status": "DIn02"
+    },
+    {
+      "name": "1F 水底投射燈（作廢）",
+      "status": "DIn03"
+    },
+    {
+      "name": "1F 噴水池馬達（常開）",
+      "status": "DIn04"
+    },
+    {
+      "name": "1F 光纖機（禁止）",
+      "status": "DIn05"
+    },
+    {
+      "name": "1F 水池投射燈",
+      "status": "DIn06"
+    },
+    {
+      "name": "1F 景觀燈（交誼廳前）",
+      "status": "DIn07"
+    },
+    {
+      "name": "1F 景觀燈（健身房前）",
+      "status": "DIn08"
+    },
+    {
+      "name": "1F 水底投射燈",
+      "status": "DIn09"
+    },
+    {
+      "name": "1F 投射燈＋景觀矮燈",
+      "status": "DIn10"
+    },
+    {
+      "name": "1F 車道投射燈",
+      "status": "DIn11"
+    },
+    {
+      "name": "1F 車道柱燈（偶數）",
+      "status": "DIn12"
+    },
+    {
+      "name": "1F 車道柱燈（奇數）",
+      "status": "DIn13"
+    },
+    {
+      "name": "1F 車道右側投射燈",
+      "status": "DIn14"
+    },
+    {
+      "name": "1F 景觀矮燈",
+      "status": "DIn15"
+    }
+  ]
+}
+

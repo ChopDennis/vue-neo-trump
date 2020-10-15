@@ -486,8 +486,40 @@
 </template>
 
 <script>
+    import lightDevice1L1 from "../assets/doc/illumi-system-read-only.json"
+
     export default {
-        name: "PageLightList"
+        name: "PageLightList",
+        data() {
+            return {
+                light1l1: lightDevice1L1
+            }
+        },
+        beforeMount() {
+            this.readLight1l1()
+        },
+        methods: {
+            readLight1l1() {
+                let waterSystemAPI = "/proxy/api/device/value/read_illumi_100"
+                this.axios.get(waterSystemAPI).then(
+                    (response) => {
+                        let rex = /^DIn/
+                        response.data.forEach((item) => {
+                            if (rex.test(item.name)) {
+                                this.light1l1[item.address].forEach((device) => {
+                                        if (device.status === item.name) {
+                                            device.status = item.status
+                                        }
+                                    }
+                                )
+                            }
+                        })
+                    }
+                ).catch((error) => {
+                    console.log(error)
+                })
+            },
+        }
     }
 </script>
 

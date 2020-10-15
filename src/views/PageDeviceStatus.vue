@@ -63,7 +63,7 @@
 </template>
 
 <script>
-  import illumi from "../assets/doc/illumi-1L1-table.json"
+  import illumi from "../assets/doc/illumi-system-read-only.json"
     export default {
         name: "PageDeviceStatus",
         data(){

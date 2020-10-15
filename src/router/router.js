@@ -24,7 +24,7 @@ const routes = [
     },{
         path: '/light',
         name: 'Light',
-        component: () => import('../views/PageLightList'),
+        component: () => import('../views/PageLightSystem'),
     },
 
 ]
