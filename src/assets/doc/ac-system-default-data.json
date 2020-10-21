@@ -1,0 +1,80 @@
+{
+  "15": [
+    {
+      "name": "2F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "3F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "4F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "5F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "6F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "7F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "8F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "9F 梯廳冷氣",
+      "status": false
+    }
+  ],
+  "16": [
+    {
+      "name": "10F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "11F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "12F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "13F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "14F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "15F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "16F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "17F 梯廳冷氣",
+      "status": false
+    }
+  ],
+  "17": [
+    {
+      "name": "18F 梯廳冷氣",
+      "status": false
+    },
+    {
+      "name": "19F 梯廳冷氣",
+      "status": false
+    }
+  ]
+}

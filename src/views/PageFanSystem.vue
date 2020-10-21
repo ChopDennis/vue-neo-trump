@@ -60,8 +60,11 @@
         watch: {
             errorFlag: "showErrorModel"
         },
-        beforeMount() {
+        mounted() {
             this.readFanSystem()
+            setInterval(() => {
+                location.reload()
+            }, 60000)
         },
         methods: {
             readFanSystem() {

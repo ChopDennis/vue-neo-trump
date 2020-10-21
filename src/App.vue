@@ -12,14 +12,17 @@
           <span class="text-center text-light font-weight-bold">NEO TRUMP 新川普</span>
         </b-col>
         <b-col sm="8">
-          <router-link to="/">
+          <router-link to="/fan">
             進排風系統
           </router-link> |
-          <router-link to="/system">
+          <router-link to="/water">
             揚汙廢水系統
           </router-link> |
           <router-link to="/light">
             燈控系統
+          </router-link> |
+          <router-link to="/ac">
+            冷氣系統
           </router-link>
         </b-col>
       </b-row>

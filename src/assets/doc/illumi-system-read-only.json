@@ -60,6 +60,237 @@
       "name": "1F 景觀矮燈",
       "status": "DIn15"
     }
+  ],
+  "4": [
+    {
+      "name": "中控室＆信箱區照明",
+      "status": "DIn01"
+    },
+    {
+      "name": "尚未確認設備名稱",
+      "status": "DIn02"
+    }
+  ],
+  "5": [
+    {
+      "name": "1F 地理投射燈",
+      "status": "DIn01"
+    },
+    {
+      "name": "1F 車道壁燈",
+      "status": "DIn02"
+    },
+    {
+      "name": "1F（1）車道地理投射燈",
+      "status": "DIn03"
+    },
+    {
+      "name": "1F（2）車道地理投射燈",
+      "status": "DIn04"
+    },
+    {
+      "name": "1F 大樓門口壁燈",
+      "status": "DIn05"
+    },
+    {
+      "name": "1F 鏡面水池燈",
+      "status": "DIn06"
+    },
+    {
+      "name": "2F～19F CD棟LED投光燈",
+      "status": "DIn07"
+    },
+    {
+      "name": "2F～19F AB棟LED投光燈",
+      "status": "DIn08"
+    }
+  ],
+  "6": [
+    {
+      "name": "R1F 造型投射燈",
+      "status": "DIn01"
+    },
+    {
+      "name": "R1F 屋頂景觀燈.2",
+      "status": "DIn02"
+    },
+    {
+      "name": "R1F 屋頂景觀燈.3",
+      "status": "DIn03"
+    },
+    {
+      "name": "R1F 屋頂景觀燈.4",
+      "status": "DIn04"
+    },
+    {
+      "name": "R1F 屋頂景觀燈.5",
+      "status": "DIn05"
+    },
+    {
+      "name": "R1F 屋頂景觀燈.1",
+      "status": "DIn06"
+    },
+    {
+      "name": "1F 大廳層板燈＆電梯廳嵌燈",
+      "status": "DIn07"
+    },
+    {
+      "name": "1F 大廳層板燈＆電梯廳嵌燈",
+      "status": "DIn08"
+    }
+  ],
+  "7": [
+    {
+      "name": "1F 入口嵌燈",
+      "status": "DIn01"
+    },
+    {
+      "name": "1F 車道上方嵌燈",
+      "status": "DIn02"
+    }
+  ],
+  "11": [
+    {
+      "name": "2F 梯廳走道燈",
+      "status": "DIn01"
+    },
+    {
+      "name": "3F 梯廳走道燈",
+      "status": "DIn02"
+    },
+    {
+      "name": "4F 梯廳走道燈",
+      "status": "DIn03"
+    },
+    {
+      "name": "5F 梯廳走道燈",
+      "status": "DIn04"
+    },
+    {
+      "name": "6F 梯廳走道燈",
+      "status": "DIn05"
+    },
+    {
+      "name": "7F 梯廳走道燈",
+      "status": "DIn06"
+    },
+    {
+      "name": "8F 梯廳走道燈",
+      "status": "DIn07"
+    },
+    {
+      "name": "9F 梯廳走道燈",
+      "status": "DIn08"
+    },
+    {
+      "name": "10F 梯廳走道燈",
+      "status": "DIn09"
+    },
+    {
+      "name": "11F 梯廳走道燈",
+      "status": "DIn10"
+    },
+    {
+      "name": "12F 梯廳走道燈",
+      "status": "DIn11"
+    },
+    {
+      "name": "13F 梯廳走道燈",
+      "status": "DIn12"
+    },
+    {
+      "name": "14F 梯廳走道燈",
+      "status": "DIn13"
+    },{
+      "name": "15F 梯廳走道燈",
+      "status": "DIn14"
+    },{
+      "name": "16F 梯廳走道燈",
+      "status": "DIn15"
+    },{
+      "name": "17F 梯廳走道燈",
+      "status": "DIn16"
+    }
+  ],
+  "12": [
+    {
+      "name": "18F 梯廳走道燈",
+      "status": "DIn01"
+    },
+    {
+      "name": "19F 梯廳走道燈",
+      "status": "DIn02"
+    },
+    {
+      "name": "2F～7F（1）C棟線型LED燈",
+      "status": "DIn03"
+    },
+    {
+      "name": "8F～13F（1）C棟線型LED燈",
+      "status": "DIn04"
+    },
+    {
+      "name": "14F～19F（1）C棟線型LED燈",
+      "status": "DIn05"
+    },
+    {
+      "name": "2F～7F（2）D棟線型LED燈",
+      "status": "DIn06"
+    },
+    {
+      "name": "8F～13F（2）D棟線型LED燈",
+      "status": "DIn07"
+    },
+    {
+      "name": "14F～19F（2）D棟線型LED燈",
+      "status": "DIn08"
+    },
+    {
+      "name": "門口層板燈",
+      "status": "DIn09"
+    },
+    {
+      "name": "尚未連接設備",
+      "status": "DIn10"
+    }
+  ],
+  "21": [
+    {
+      "name": "2F～6F 梯廳走道燈",
+      "status": "DIn01"
+    },
+    {
+      "name": "7F～12F 梯廳走道燈",
+      "status": "DIn02"
+    },
+    {
+      "name": "13F～R1F 梯廳走道燈",
+      "status": "DIn03"
+    },
+    {
+      "name": "B4F～B1F （B梯）梯間燈",
+      "status": "DIn04"
+    },
+    {
+      "name": "B4F～R3F （A梯）梯間燈",
+      "status": "DIn05"
+    },
+    {
+      "name": "B4F～R2F （A梯）梯間燈",
+      "status": "DIn06"
+    },
+    {
+      "name": "B4F～1F （B梯）梯間燈",
+      "status": "DIn07"
+    },
+    {
+      "name": "2F～R1F （B梯）梯間燈",
+      "status": "DIn08"
+    },
+    {
+      "name": "2F～19F （B梯）梯間燈",
+      "status": "DIn09"
+    }
   ]
 }
 

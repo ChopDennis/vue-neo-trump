@@ -29,12 +29,9 @@
     <b-container>
       <b-row>
         <b-col lg="6">
-          <h4 class="text-white">
-            1L1
-          </h4>
           <b-row
-            v-for="(item,index) in defaultTable['2']"
-            :key="'1L1-'+index"
+            v-for="(item,index) in defaultTable['15']"
+            :key="'15-'+index"
             style="background-color: #343a40"
             class="rounded-lg border-0 text-white font-weight-bold mb-3 mx-1"
           >
@@ -49,42 +46,15 @@
               <ElementSwitchToggle
                 class="mt-2"
                 :toggled.sync="item.status"
-                @toggleButton="toggleLightSystem(index+1,item.status,1)"
-              />
-            </b-col>
-          </b-row>
-          <h4 class="text-white">
-            EL1
-          </h4>
-          <b-row
-            v-for="(item,index) in defaultTable['4']"
-            :key="'1L-6-'+index"
-            style="background-color: #343a40"
-            class="rounded-lg border-0 text-white font-weight-bold mb-3 mx-1"
-          >
-            <b-col
-              cols="8"
-              class="text-lg-center text-left py-2"
-              style="line-height: 2.5rem"
-            >
-              {{ item.name }}
-            </b-col>
-            <b-col cols="4">
-              <ElementSwitchToggle
-                class="mt-2"
-                :toggled.sync="item.status"
-                @toggleButton="toggleLightSystem(index+1,item.status,4)"
+                @toggleButton="toggleLightSystem(index+1,item.status,15)"
               />
             </b-col>
           </b-row>
         </b-col>
         <b-col lg="6">
-          <h4 class="text-white">
-            1L
-          </h4>
           <b-row
-            v-for="(item,index) in defaultTable['5']"
-            :key="'1L-5-'+index"
+            v-for="(item,index) in defaultTable['16']"
+            :key="'16-'+index"
             style="background-color: #343a40"
             class="rounded-lg border-0 text-white font-weight-bold mb-3 mx-1"
           >
@@ -99,13 +69,13 @@
               <ElementSwitchToggle
                 class="mt-2"
                 :toggled.sync="item.status"
-                @toggleButton="toggleLightSystem(index+1,item.status,5)"
+                @toggleButton="toggleLightSystem(index+1,item.status,16)"
               />
             </b-col>
           </b-row>
           <b-row
-            v-for="(item,index) in defaultTable['6']"
-            :key="'1L-6-'+index"
+            v-for="(item,index) in defaultTable['17']"
+            :key="'17-'+index"
             style="background-color: #343a40"
             class="rounded-lg border-0 text-white font-weight-bold mb-3 mx-1"
           >
@@ -120,104 +90,7 @@
               <ElementSwitchToggle
                 class="mt-2"
                 :toggled.sync="item.status"
-                @toggleButton="toggleLightSystem(index+1,item.status,6)"
-              />
-            </b-col>
-          </b-row>
-          <b-row
-            v-for="(item,index) in defaultTable['7']"
-            :key="'1L-7-'+index"
-            style="background-color: #343a40"
-            class="rounded-lg border-0 text-white font-weight-bold mb-3 mx-1"
-          >
-            <b-col
-              cols="8"
-              class="text-lg-center text-left py-2"
-              style="line-height: 2.5rem"
-            >
-              {{ item.name }}
-            </b-col>
-            <b-col cols="4">
-              <ElementSwitchToggle
-                class="mt-2"
-                :toggled.sync="item.status"
-                @toggleButton="toggleLightSystem(index+1,item.status,7)"
-              />
-            </b-col>
-          </b-row>
-        </b-col>
-        <b-col lg="6">
-          <h4 class="text-white">
-            1LA
-          </h4>
-          <b-row
-            v-for="(item,index) in defaultTable['11']"
-            :key="'1L1A-1-'+index"
-            style="background-color: #343a40"
-            class="rounded-lg border-0 text-white font-weight-bold mb-3 mx-1"
-          >
-            <b-col
-              cols="8"
-              class="text-lg-center text-left py-2"
-              style="line-height: 2.5rem"
-            >
-              {{ item.name }}
-            </b-col>
-            <b-col cols="4">
-              <ElementSwitchToggle
-                class="mt-2"
-                :toggled.sync="item.status"
-                @toggleButton="toggleLightSystem(index+1,item.status,9)"
-              />
-            </b-col>
-          </b-row>
-        </b-col>
-        <b-col lg="6">
-          <h4 class="text-white">
-            1LA
-          </h4>
-          <b-row
-            v-for="(item,index) in defaultTable['12']"
-            :key="'1L1A-2-'+index"
-            style="background-color: #343a40"
-            class="rounded-lg border-0 text-white font-weight-bold mb-3 mx-1"
-          >
-            <b-col
-              cols="8"
-              class="text-lg-center text-left py-2"
-              style="line-height: 2.5rem"
-            >
-              {{ item.name }}
-            </b-col>
-            <b-col cols="4">
-              <ElementSwitchToggle
-                class="mt-2"
-                :toggled.sync="item.status"
-                @toggleButton="toggleLightSystem(index+1,item.status,10)"
-              />
-            </b-col>
-          </b-row>
-          <h4 class="text-white">
-            E1LA
-          </h4>
-          <b-row
-            v-for="(item,index) in defaultTable['21']"
-            :key="'EL1A-'+index"
-            style="background-color: #343a40"
-            class="rounded-lg border-0 text-white font-weight-bold mb-3 mx-1"
-          >
-            <b-col
-              cols="8"
-              class="text-lg-center text-left py-2"
-              style="line-height: 2.5rem"
-            >
-              {{ item.name }}
-            </b-col>
-            <b-col cols="4">
-              <ElementSwitchToggle
-                class="mt-2"
-                :toggled.sync="item.status"
-                @toggleButton="toggleLightSystem(index+1,item.status,20)"
+                @toggleButton="toggleLightSystem(index+1,item.status,17)"
               />
             </b-col>
           </b-row>
@@ -228,8 +101,8 @@
 </template>
 
 <script>
-    import lightDevice1L1 from "../assets/doc/illumi-system-read-only.json"
-    import defaultTable from "../assets/doc/illumi-system-default-data.json"
+    import acDevice from "../assets/doc/ac-system-read-only.json"
+    import defaultTable from "../assets/doc/ac-system-default-data.json"
     import ElementSwitchToggle from "../components/ElementSwitchToggle"
 
     export default {
@@ -239,7 +112,7 @@
         },
         data() {
             return {
-                light1l1: lightDevice1L1,
+                light1l1: acDevice,
                 defaultTable: defaultTable,
                 toggled: true,
                 errorFlag: false,
@@ -256,15 +129,13 @@
         },
         methods: {
             readLight1l1() {
-                let waterSystemAPI = "http://192.168.1.10/proxy/api/device/value/read_illumi_100"
+                let waterSystemAPI = "http://192.168.1.10/proxy/api/device/value/read_ac_100"
                 this.axios.get(waterSystemAPI).then(
                     (response) => {
                         let rex = /^DIn/
                         response.data.forEach((item) => {
                             if (rex.test(item.name)) {
-                                if (item.address === 2 || item.address === 5 || item.address === 4 || item.address === 6
-                                    || item.address === 7 || item.address === 11 || item.address === 12||
-                                    item.address === 21) {
+                                if (item.address === 15 || item.address === 16 || item.address === 17) {
                                     this.light1l1[item.address].forEach((device) => {
                                         if (device.status === item.name) {
                                             device.status = item.status === 1;

@@ -205,6 +205,9 @@
             setTimeout(() => {
                 this.showOverlay()
             }, 3000)
+            setInterval(()=>{
+              location.reload()
+            },60000)
         },
         methods: {
             readWaterSystem() {

@@ -1,0 +1,80 @@
+{
+  "15": [
+    {
+      "name": "2F 梯廳冷氣",
+      "status": "DIn01"
+    },
+    {
+      "name": "3F 梯廳冷氣",
+      "status": "DIn02"
+    },
+    {
+      "name": "4F 梯廳冷氣",
+      "status": "DIn03"
+    },
+    {
+      "name": "5F 梯廳冷氣",
+      "status": "DIn04"
+    },
+    {
+      "name": "6F 梯廳冷氣",
+      "status": "DIn05"
+    },
+    {
+      "name": "7F 梯廳冷氣",
+      "status": "DIn06"
+    },
+    {
+      "name": "8F 梯廳冷氣",
+      "status": "DIn07"
+    },
+    {
+      "name": "9F 梯廳冷氣",
+      "status": "DIn08"
+    }
+  ],
+  "16": [
+    {
+      "name": "10F 梯廳冷氣",
+      "status": "DIn01"
+    },
+    {
+      "name": "11F 梯廳冷氣",
+      "status": "DIn02"
+    },
+    {
+      "name": "12F 梯廳冷氣",
+      "status": "DIn03"
+    },
+    {
+      "name": "13F 梯廳冷氣",
+      "status": "DIn04"
+    },
+    {
+      "name": "14F 梯廳冷氣",
+      "status": "DIn05"
+    },
+    {
+      "name": "15F 梯廳冷氣",
+      "status": "DIn06"
+    },
+    {
+      "name": "16F 梯廳冷氣",
+      "status": "DIn07"
+    },
+    {
+      "name": "17F 梯廳冷氣",
+      "status": "DIn08"
+    }
+  ],
+  "17": [
+    {
+      "name": "18F 梯廳冷氣",
+      "status": "DIn01"
+    },
+    {
+      "name": "19F 梯廳冷氣",
+      "status": "DIn02"
+    }
+  ]
+}
