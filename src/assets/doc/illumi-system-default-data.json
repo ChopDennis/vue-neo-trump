@@ -6,7 +6,7 @@
     },
     {
       "name": "1F 壁燈＋地理投射燈",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 水底投射燈（作廢）",
@@ -14,7 +14,7 @@
     },
     {
       "name": "1F 噴水池馬達（常開）",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 光纖機（禁止）",
@@ -22,267 +22,267 @@
     },
     {
       "name": "1F 水池投射燈",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 景觀燈（交誼廳前）",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 景觀燈（健身房前）",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 水底投射燈",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 投射燈＋景觀矮燈",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 車道投射燈",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 車道柱燈（偶數）",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 車道柱燈（奇數）",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 車道右側投射燈",
-      "status": true
+      "status": false
     },
     {
       "name": "1F 景觀矮燈",
-      "status": true
+      "status": false
     }
   ],
   "5": [
     {
-      "name": "1F 地理投射燈",
-      "status": true
+      "name": "1F 地理投射燈【17:30-06:00】",
+      "status": false
     },
     {
-      "name": "1F 車道壁燈",
-      "status": true
+      "name": "1F 車道壁燈【17:30-06:00】",
+      "status": false
     },
     {
-      "name": "1F（1）車道地理投射燈",
-      "status": true
+      "name": "1F（1）車道地理投射燈【17:30-06:00】",
+      "status": false
     },
     {
-      "name": "1F（2）車道地理投射燈",
-      "status": true
+      "name": "1F（2）車道地理投射燈【17:30-06:00】",
+      "status": false
     },
     {
-      "name": "1F 大樓門口壁燈",
-      "status": true
+      "name": "1F 大樓門口壁燈【17:30-06:00】",
+      "status": false
     },
     {
-      "name": "1F 鏡面水池燈",
-      "status": true
+      "name": "1F 鏡面水池燈【17:30-22:00】",
+      "status": false
     },
     {
       "name": "2F～19F CD棟LED投光燈",
-      "status": true
+      "status": false
     },
     {
       "name": "2F～19F AB棟LED投光燈",
-      "status": true
+      "status": false
     }
   ],
   "6": [
     {
-      "name": "R1F 造型投射燈",
-      "status": true
+      "name": "R1F 造型投射燈【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "R1F 屋頂景觀燈.2",
-      "status": true
+      "name": "R1F 屋頂景觀燈.2【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "R1F 屋頂景觀燈.3",
-      "status": true
+      "name": "R1F 屋頂景觀燈.3【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "R1F 屋頂景觀燈.4",
-      "status": true
+      "name": "R1F 屋頂景觀燈.4【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "R1F 屋頂景觀燈.5",
-      "status": true
+      "name": "R1F 屋頂景觀燈.5【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "R1F 屋頂景觀燈.1",
-      "status": true
+      "name": "R1F 屋頂景觀燈.1【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "1F 大廳層板燈＆電梯廳嵌燈",
-      "status": true
+      "name": "1F 大廳層板燈＆電梯廳嵌燈【06:00-21:00】",
+      "status": false
     },
     {
-      "name": "1F 大廳層板燈＆電梯廳嵌燈",
-      "status": true
+      "name": "1F 大廳層板燈＆電梯廳嵌燈【06:00-23:00】",
+      "status": false
     }
   ],
   "7": [
     {
-      "name": "1F 入口嵌燈",
-      "status": true
+      "name": "1F 入口嵌燈【17:30-06:00】",
+      "status": false
     },
     {
-      "name": "1F 車道上方嵌燈",
-      "status": true
+      "name": "1F 車道上方嵌燈【17:30-06:00】",
+      "status": false
     }
   ],
   "11": [
     {
       "name": "2F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "3F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "4F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "5F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "6F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "7F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "8F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "9F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "10F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "11F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "12F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "13F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "14F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "15F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "16F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "17F 梯廳走道燈",
-      "status": true
+      "status": false
     }
   ],
   "12": [
     {
       "name": "18F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "19F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
-      "name": "2F～7F（1）C棟線型LED燈",
-      "status": true
+      "name": "2F～7F（1）C棟線型LED燈【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "8F～13F（1）C棟線型LED燈",
-      "status": true
+      "name": "8F～13F（1）C棟線型LED燈【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "14F～19F（1）C棟線型LED燈",
-      "status": true
+      "name": "14F～19F（1）C棟線型LED燈【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "2F～7F（2）D棟線型LED燈",
-      "status": true
+      "name": "2F～7F（2）D棟線型LED燈【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "8F～13F（2）D棟線型LED燈",
-      "status": true
+      "name": "8F～13F（2）D棟線型LED燈【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "14F～19F（2）D棟線型LED燈",
-      "status": true
+      "name": "14F～19F（2）D棟線型LED燈【17:30-22:00】",
+      "status": false
     },
     {
-      "name": "門口層板燈",
-      "status": true
+      "name": "門口層板燈【17:30-06:00】",
+      "status": false
     },
     {
       "name": "尚未連接設備",
-      "status": true
+      "status": false
     }
   ],
   "21": [
     {
       "name": "2F～6F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "7F～12F 梯廳走道燈",
-      "status":true
+      "status": false
     },
     {
       "name": "13F～R1F 梯廳走道燈",
-      "status": true
+      "status": false
     },
     {
       "name": "B4F～B1F （B梯）梯間燈",
-      "status": true
+      "status": false
     },
     {
       "name": "B4F～R3F （A梯）梯間燈",
-      "status": true
+      "status": false
     },
     {
       "name": "B4F～R2F （A梯）梯間燈",
-      "status": true
+      "status": false
     },
     {
       "name": "B4F～1F （B梯）梯間燈",
-      "status": true
+      "status": false
     },
     {
       "name": "2F～R1F （B梯）梯間燈",
-      "status": true
+      "status": false
     },
     {
       "name": "2F～19F （B梯）梯間燈",
-      "status": true
+      "status": false
     }
   ]
 }

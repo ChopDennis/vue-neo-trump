@@ -23,12 +23,12 @@
       title="系統訊息"
     >
       <p class="my-4 text-center">
-        燈光設備正在關閉，請稍等網頁重整...。
+        燈光設備正在{{ notice }}，請稍等網頁重整...。
       </p>
     </b-modal>
     <b-container>
       <b-row>
-        <b-col lg="6">
+        <b-col lg="4">
           <h4 class="text-white">
             1L1
           </h4>
@@ -78,7 +78,7 @@
             </b-col>
           </b-row>
         </b-col>
-        <b-col lg="6">
+        <b-col lg="8">
           <h4 class="text-white">
             1L
           </h4>
@@ -146,7 +146,7 @@
             </b-col>
           </b-row>
         </b-col>
-        <b-col lg="6">
+        <b-col lg="4">
           <h4 class="text-white">
             1LA
           </h4>
@@ -172,7 +172,7 @@
             </b-col>
           </b-row>
         </b-col>
-        <b-col lg="6">
+        <b-col lg="8">
           <h4 class="text-white">
             1LA
           </h4>
@@ -243,7 +243,8 @@
                 defaultTable: defaultTable,
                 toggled: true,
                 errorFlag: false,
-                show: true
+                show: true,
+                notice: "關閉"
             }
         }, watch: {
             errorFlag: "showErrorModel"
@@ -263,7 +264,7 @@
                         response.data.forEach((item) => {
                             if (rex.test(item.name)) {
                                 if (item.address === 2 || item.address === 5 || item.address === 4 || item.address === 6
-                                    || item.address === 7 || item.address === 11 || item.address === 12||
+                                    || item.address === 7 || item.address === 11 || item.address === 12 ||
                                     item.address === 21) {
                                     this.light1l1[item.address].forEach((device) => {
                                         if (device.status === item.name) {
@@ -279,6 +280,7 @@
                 })
             },
             toggleLightSystem(index, status, address) {
+                if (status === false) this.notice = "開啟"
                 let value = (status === true) ? 0 : 1
                 let key = (index < 10) ? "0" + index : index
                 let request = {

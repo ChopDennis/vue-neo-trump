@@ -23,7 +23,7 @@
       title="系統訊息"
     >
       <p class="my-4 text-center">
-        燈光設備正在關閉，請稍等網頁重整...。
+        冷氣設備正在{{ notice }}，請稍等網頁重整...。
       </p>
     </b-modal>
     <b-container>
@@ -116,7 +116,8 @@
                 defaultTable: defaultTable,
                 toggled: true,
                 errorFlag: false,
-                show: true
+                show: true,
+                notice: "關閉"
             }
         }, watch: {
             errorFlag: "showErrorModel"
@@ -150,6 +151,7 @@
                 })
             },
             toggleLightSystem(index, status, address) {
+                if (status === false) this.notice = "開啟"
                 let value = (status === true) ? 0 : 1
                 let key = (index < 10) ? "0" + index : index
                 let request = {
