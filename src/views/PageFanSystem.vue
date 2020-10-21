@@ -69,15 +69,14 @@
                 this.axios.get(fanSystemAPI).then(
                     (response) => {
                         let rex = /^DIn/
-                        console.log(response.data)
                         response.data.forEach((item) => {
                             if (rex.test(item.name)) {
 
                                 this.pointTable[item.address].forEach((device) => {
                                         if (device.status === item.name) {
-                                            device.status = item.status
+                                            device.status = item.status.toString()
                                         } else if (device.error === item.name) {
-                                            device.error = item.status
+                                            device.error = item.status.toString()
                                             if (device.error === 1) {
                                                 this.errorFlag = true
                                             }

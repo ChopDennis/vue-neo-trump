@@ -1,481 +1,44 @@
 <template>
-  <main>
+  <main class="py-3">
+    <b-overlay
+      :show="show"
+      no-wrap
+      variant="dark"
+      spinner-variant="light"
+    />
+    <b-modal
+      ref="device-error"
+      hide-footer
+      header-bg-variant="dark"
+      header-text-variant="white"
+      centered
+      title="系統訊息"
+    >
+      <p class="my-4 text-center">
+        燈光設備正在關閉，請稍等網頁重整...。
+      </p>
+    </b-modal>
     <b-container>
       <b-row>
-        <b-col cols="2">
-          <b-row style="height: 50px;color: #777777">
-            <b-col cols="12">
-              <p style="color: #42b983">
-                燈別種類
-              </p>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                B2F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                B1F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                1F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                2F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                3F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                4F
-              </h3>
-            </b-col>
-          </b-row>
-        </b-col>
-        <b-col cols="10">
+        <b-col lg="6">
           <b-row
-            style="height: 50px"
-            class=""
+            v-for="(item,index) in defaultTable['2']"
+            :key="index"
+            style="background-color: #343a40"
+            class="rounded-lg border-0 text-white font-weight-bold mb-3 mx-1"
           >
-            <b-col cols="3">
-              車道燈
+            <b-col
+              cols="8"
+              class="text-lg-center text-left py-2"
+              style="line-height: 2.5rem"
+            >
+              {{ item.name }}
             </b-col>
-            <b-col cols="3">
-              走道燈
-            </b-col>
-            <b-col cols="3">
-              大廳燈
-            </b-col>
-            <b-col cols="3">
-              投射燈
-            </b-col>
-          </b-row>
-          <!--                    B2F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-          </b-row>
-          <!--                    B1F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-          </b-row>
-          <!--                    1F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-          </b-row>
-          <!--                    2F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-          </b-row>
-          <!--                    3F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-          </b-row>
-          <!--                    4F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
-      <b-row class="my-5">
-        <b-col cols="2">
-          <b-row style="height: 50px;color: #777777">
-            <b-col cols="12">
-              <p style="color: #42b983">
-                設備種類
-              </p>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                B2F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                B1F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                1F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                2F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                3F
-              </h3>
-            </b-col>
-            <b-col cols="12">
-              <h3 class="mt-4">
-                4F
-              </h3>
-            </b-col>
-          </b-row>
-        </b-col>
-        <b-col cols="10">
-          <b-row
-            style="height: 50px"
-            class=""
-          >
-            <b-col cols="3">
-              冷氣機-A
-            </b-col>
-            <b-col cols="3">
-              冷氣機-B
-            </b-col>
-            <b-col cols="3">
-              風扇
-            </b-col>
-            <b-col cols="3">
-              感應器
-            </b-col>
-          </b-row>
-          <!--                    B2F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-          </b-row>
-          <!--                    B1F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-          </b-row>
-          <!--                    1F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-          </b-row>
-          <!--                    2F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-          </b-row>
-          <!--                    3F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-          </b-row>
-          <!--                    4F-->
-          <b-row
-            style="height: 50px;background-color: lightgray"
-            class="rounded-lg mt-3"
-          >
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: darkgray"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
-              />
-            </b-col>
-            <b-col cols="3">
-              <span
-                class="fa fa-circle mt-3"
-                style="color: #42b983"
+            <b-col cols="4">
+              <ElementSwitchToggle
+                class="mt-2"
+                :toggled.sync="item.status"
+                @toggleButton="changeToggleValue(index+1,item.status)"
               />
             </b-col>
           </b-row>
@@ -487,31 +50,47 @@
 
 <script>
     import lightDevice1L1 from "../assets/doc/illumi-system-read-only.json"
+    import defaultTable from "../assets/doc/illumi-system-default-data.json"
+    import ElementSwitchToggle from "../components/ElementSwitchToggle"
 
     export default {
         name: "PageLightList",
+        components: {
+            ElementSwitchToggle
+        },
         data() {
             return {
-                light1l1: lightDevice1L1
+                light1l1: lightDevice1L1,
+                defaultTable: defaultTable,
+                toggled: true,
+                errorFlag: false,
+                show: true
             }
+        }, watch: {
+            errorFlag: "showErrorModel"
         },
-        beforeMount() {
+        mounted() {
             this.readLight1l1()
+            setTimeout(() => {
+                this.showOverlay()
+
+            }, 1500)
         },
         methods: {
             readLight1l1() {
-                let waterSystemAPI = "/proxy/api/device/value/read_illumi_100"
+                let waterSystemAPI = "http://192.168.1.10/proxy/api/device/value/read_illumi_100"
                 this.axios.get(waterSystemAPI).then(
                     (response) => {
                         let rex = /^DIn/
                         response.data.forEach((item) => {
                             if (rex.test(item.name)) {
-                                this.light1l1[item.address].forEach((device) => {
+                                if (item.address === 2) {
+                                    this.light1l1[item.address].forEach((device) => {
                                         if (device.status === item.name) {
-                                            device.status = item.status
+                                            device.status = item.status === 1;
                                         }
-                                    }
-                                )
+                                    })
+                                }
                             }
                         })
                     }
@@ -519,10 +98,54 @@
                     console.log(error)
                 })
             },
+            changeToggleValue(index, status) {
+                this.errorFlag = true
+                let value = 0
+                if (status === true) {
+                    value = 0
+                } else {
+                    value = 1
+                }
+                if (index < 10) {
+                    index = "0" + index
+                }
+                let request = {
+                    "port": "/dev/ttyUSB0",
+                    "address": 1,
+                    "name": "DOut" + index,
+                    "value": value
+                }
+                let waterSystemAPI = "http://192.168.1.10/proxy/api/device/value/write"
+                this.axios.post(waterSystemAPI, request).then(
+                    (response) => {
+                        if (response.data.status === 0) {
+                            setTimeout(function () {
+                                location.reload()
+                            }, 1500)
+
+                        } else {
+                            alert("Error!")
+                        }
+                    }
+                )
+                let lightToggle = this.light1l1['2'][index].status
+                lightToggle = !lightToggle
+                this.light1l1['2'][index].status = lightToggle
+            },
+            showErrorModel() {
+                this.$refs["device-error"].show()
+            },
+            showOverlay() {
+                this.defaultTable = this.light1l1
+                this.show = false
+            }
         }
     }
 </script>
 
 <style scoped>
-
+    main {
+        background: linear-gradient(to bottom left, #216e93, #21648a, #1f5881, #172d5b, #191c51);
+        margin-top: -1rem;
+    }
 </style>

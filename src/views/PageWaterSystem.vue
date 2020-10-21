@@ -1,5 +1,11 @@
 <template>
   <main class="py-3">
+    <b-overlay
+      :show="show"
+      no-wrap
+      variant="dark"
+      spinner-variant="light"
+    />
     <b-container>
       <b-modal
         ref="device-error"
@@ -22,13 +28,13 @@
         <b-row>
           <b-col
             lg="8"
-            class="py-3"
           >
             <b-row>
               <b-col
                 v-for="(item, index) in defaultTable['15']"
                 :key="'lifting-pump-2-'+index"
                 lg="3"
+                class="py-3"
               >
                 <SystemInfoCard
                   :name="item.name"
@@ -40,6 +46,7 @@
                 v-for="(item, index) in defaultTable['16']"
                 :key="'lifting-pump-3-'+index"
                 lg="3"
+                class="py-3"
               >
                 <SystemInfoCard
                   :name="item.name"
@@ -181,7 +188,8 @@
             return {
                 defaultTable: defaultWaterSystemData,
                 pointTable: devicePoints,
-                errorFlag: false
+                errorFlag: false,
+                show: true
             }
         },
         watch: {
@@ -191,7 +199,12 @@
             this.readWaterSystem()
             this.readNaturalWater9F()
             this.readNaturalWaterR3F()
-            this.defaultTable = this.pointTable
+            this.updateSystemData()
+        },
+        mounted() {
+            setTimeout(() => {
+                this.showOverlay()
+            }, 3000)
         },
         methods: {
             readWaterSystem() {
@@ -203,10 +216,10 @@
                             if (rex.test(item.name)) {
                                 this.pointTable[item.address].forEach((device) => {
                                         if (device.status === item.name) {
-                                            device.status = item.status
+                                            device.status = item.status.toString()
                                         } else if (device.error === item.name) {
-                                            device.error = item.status
-                                            if (device.error === 1) {
+                                            device.error = item.status.toString()
+                                            if (device.error === 0) {
                                                 this.errorFlag = true
                                             }
                                         }
@@ -219,7 +232,7 @@
                     console.log(error)
                 })
             },
-            readNaturalWater9F(){
+            readNaturalWater9F() {
                 let apiURL = "http://192.168.1.10/proxy/api/device/value/read_water_300"
                 this.axios.get(apiURL).then(
                     (response) => {
@@ -228,9 +241,9 @@
                             if (rex.test(item.name)) {
                                 this.pointTable[item.address].forEach((device) => {
                                         if (device.status === item.name) {
-                                            device.status = item.status
+                                            device.status = item.status.toString()
                                         } else if (device.error === item.name) {
-                                            device.error = item.status
+                                            device.error = item.status.toString()
                                             if (device.error === 1) {
                                                 this.errorFlag = true
                                             }
@@ -244,7 +257,7 @@
                     console.log(error)
                 })
             },
-            readNaturalWaterR3F(){
+            readNaturalWaterR3F() {
                 let apiURL = "http://192.168.1.10/proxy/api/device/value/read_water_500"
                 this.axios.get(apiURL).then(
                     (response) => {
@@ -252,14 +265,16 @@
                         response.data.forEach((item) => {
                             if (rex.test(item.name)) {
                                 this.pointTable[item.address].forEach((device) => {
+
                                         if (device.status === item.name) {
-                                            device.status = item.status
+                                            device.status = item.status.toString()
                                         } else if (device.error === item.name) {
-                                            device.error = item.status
+                                            device.error = item.status.toString()
                                             if (device.error === 1) {
                                                 this.errorFlag = true
                                             }
                                         }
+
                                     }
                                 )
                             }
@@ -271,16 +286,21 @@
             },
             showErrorModel() {
                 this.$refs["device-error"].show()
+            }, updateSystemData() {
+                this.defaultTable = this.pointTable
+            }, showOverlay() {
+                this.show = false
             }
         }
     }
 </script>
 
 <style scoped>
-    main{
-        background: linear-gradient(to bottom left,#216e93,#21648a,#1f5881,#172d5b,#191c51);
-        margin-top:-1rem;
+    main {
+        background: linear-gradient(to bottom left, #216e93, #21648a, #1f5881, #172d5b, #191c51);
+        margin-top: -1rem;
     }
+
     .dark-blue {
         background-color: #32608a;
     }

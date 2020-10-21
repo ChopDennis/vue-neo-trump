@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
     export default {
         name: "ElementSwitchToggle",
         props: {
@@ -43,7 +44,7 @@
     }
 
     .text-success {
-        color: $purple;
+        color: #ffc107 !important;
     }
 
     .toggle-label {

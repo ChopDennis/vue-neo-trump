@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div v-if="error === 0">
+    <div v-if="error === '0'">
       <b-card
-        v-if="status === 0"
+        v-if="status === '0'"
         :header="name"
         header-tag="header"
         class="shadow"
@@ -16,7 +16,7 @@
         </div>
       </b-card>
       <b-card
-        v-if="status === 1"
+        v-if="status === '1'"
         :header="name"
         header-tag="header"
         header-text-variant="white"
@@ -32,7 +32,7 @@
         </div>
       </b-card>
       <b-card
-        v-if="status === -1"
+        v-if="status === '-1'"
         :header="name"
         header-tag="header"
         header-text-variant="white"
@@ -48,7 +48,7 @@
         </div>
       </b-card>
       <b-card
-        v-if="status === 99"
+        v-if="status === '99'"
         :header="name"
         header-tag="header"
         class="shadow"
@@ -63,9 +63,9 @@
       </b-card>
     </div>
     <div v-else>
-      <div v-if="error === 1">
+      <div v-if="error === '1'">
         <b-card
-          v-if="status === -1"
+          v-if="status === '-1'"
           :header="name"
           header-tag="header"
           header-text-variant="white"
@@ -97,6 +97,21 @@
           </div>
         </b-card>
       </div>
+      <div v-if="error === '-1'">
+        <b-card
+          :header="name"
+          header-tag="header"
+          class="shadow"
+        >
+          <div
+            class="py-1"
+            style="color: darkgray"
+          >
+            <b-icon-clock-history class="mx-1" />
+            <span>等待回應...</span>
+          </div>
+        </b-card>
+      </div>
     </div>
   </div>
 </template>
@@ -111,13 +126,13 @@
                 required: true
             },
             error: {
-                type: Number,
-                default: 0,
+                type: String,
+                default: "",
                 required: true
             },
             status: {
-                type: Number,
-                default: 0,
+                type: String,
+                default: "",
                 required: true
             },
         },

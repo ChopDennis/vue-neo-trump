@@ -2,40 +2,40 @@
   "7": [
     {
       "name": "B2F - 加壓泵",
-      "status": -1,
+      "status": "-1",
       "error": "DIn04"
     }
   ],
   "13": [
     {
       "name": "自來水水箱-高水位",
-      "status": -1,
+      "status": "-1",
       "error": "DIn01"
     },
     {
       "name": "自來水水箱-低水位",
-      "status": -1,
+      "status": "-1",
       "error": "DIn02"
     },{
       "name": "自來水水箱蓋",
       "status": "DIn03",
-      "error": 0
+      "error": "0"
     }
   ],
   "14": [
     {
       "name": "自來水水箱-高水位",
-      "status": -1,
+      "status": "-1",
       "error": "DIn01"
     },
     {
       "name": "自來水水箱-低水位",
-      "status": -1,
+      "status": "-1",
       "error": "DIn02"
     },{
       "name": "自來水水箱蓋",
       "status": "DIn03",
-      "error": 0
+      "error": "0"
     }
   ],
   "15": [
@@ -75,7 +75,7 @@
     },
     {
       "name": "B梯 廢水池",
-      "status": -1,
+      "status": "-1",
       "error": "DIn04"
     }
   ],
@@ -92,7 +92,7 @@
     },
     {
       "name": "A梯 廢水池",
-      "status": -1,
+      "status": "-1",
       "error": "DIn04"
     }
   ],
@@ -109,7 +109,7 @@
     },
     {
       "name": "B梯 污水池",
-      "status": -1,
+      "status": "-1",
       "error": "DIn04"
     }
   ]
