@@ -19,6 +19,7 @@
           有設備異常，請儘速至現場檢查，並聯絡技術人員。
         </p>
       </b-modal>
+      <h4>下次更新時間：{{countDownTime}}</h4>
       <b-card
         header="B4F 揚水系統"
         header-text-variant="white"
@@ -189,7 +190,8 @@
                 defaultTable: defaultWaterSystemData,
                 pointTable: devicePoints,
                 errorFlag: false,
-                show: true
+                show: true,
+                countDownTime:0,
             }
         },
         watch: {
@@ -207,7 +209,12 @@
             }, 3000)
             setInterval(()=>{
               location.reload()
-            },60000)
+              this.countDownTime = 300000
+            },300000)
+            setInterval(()=>{
+             this.countDownTime--
+            },1000)
+
         },
         methods: {
             readWaterSystem() {

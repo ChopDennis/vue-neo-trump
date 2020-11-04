@@ -27,8 +27,8 @@
       </p>
     </b-modal>
     <b-container>
-      <b-row>
-        <b-col lg="4">
+      <b-row style="font-size: 15px">
+        <b-col lg="6">
           <h4 class="text-white">
             1L1
           </h4>
@@ -78,7 +78,7 @@
             </b-col>
           </b-row>
         </b-col>
-        <b-col lg="8">
+        <b-col lg="6" >
           <h4 class="text-white">
             1L
           </h4>
